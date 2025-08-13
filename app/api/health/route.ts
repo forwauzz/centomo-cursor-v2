@@ -1,40 +1,43 @@
 import { NextResponse } from 'next/server'
-import { createServerSupabaseClient } from '@/lib/supabase'
+import { createServerSupabaseClient, testSupabaseConnection } from '@/lib/supabase'
+import { getEnvironmentConfig } from '@/lib/env'
 
 export async function GET() {
   try {
-    // Test Supabase connection
-    const supabase = createServerSupabaseClient()
-    const { data, error } = await supabase.from('users').select('count').limit(1)
+    // Validate environment configuration
+    const env = getEnvironmentConfig()
     
-    if (error) {
+    // Test Supabase connection
+    const connectionResult = await testSupabaseConnection()
+    
+    if (!connectionResult.success) {
       return NextResponse.json(
-        { 
-          status: 'error', 
+        {
+          status: 'error',
           message: 'Database connection failed',
-          error: error.message 
+          error: connectionResult.error
         },
         { status: 500 }
       )
     }
 
-    return NextResponse.json({
-      status: 'healthy',
-      timestamp: new Date().toISOString(),
-      version: '2.0.0',
-      environment: process.env.NODE_ENV,
-      database: 'connected',
-      features: {
-        voiceDictation: process.env.NEXT_PUBLIC_ENABLE_VOICE_DICTATION === 'true',
-        aiAssistant: process.env.NEXT_PUBLIC_ENABLE_AI_ASSISTANT === 'true',
-        realTimeCollaboration: process.env.NEXT_PUBLIC_ENABLE_REAL_TIME_COLLABORATION === 'true',
-      },
-      compliance: {
-        mode: process.env.NEXT_PUBLIC_COMPLIANCE_MODE || 'PIPEDA',
-        auditLogging: process.env.NEXT_PUBLIC_ENABLE_AUDIT_LOGGING === 'true',
-        dataRetentionDays: process.env.NEXT_PUBLIC_DATA_RETENTION_DAYS || '2555',
-      }
-    })
+               return NextResponse.json({
+             status: 'healthy',
+             timestamp: new Date().toISOString(),
+             version: '2.0.0',
+             environment: process.env.NODE_ENV,
+             database: 'connected',
+             userCount: connectionResult.userCount,
+             app: {
+               name: env.app.name,
+               url: env.app.url
+             },
+             features: env.features,
+             compliance: env.compliance,
+             supabase: {
+               projectId: env.supabase.url.split('//')[1]?.split('.')[0] || 'unknown'
+             }
+           })
   } catch (error) {
     return NextResponse.json(
       { 

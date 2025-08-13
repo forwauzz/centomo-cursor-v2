@@ -1,47 +1,63 @@
 import { createClient } from '@supabase/supabase-js'
 import { Database } from '@/types/supabase'
+import { getEnvironmentConfig } from './env'
 
-// Environment validation
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+// Get validated environment configuration
+const env = getEnvironmentConfig()
 
-if (!supabaseUrl) {
-  throw new Error('Missing environment variable: NEXT_PUBLIC_SUPABASE_URL')
-}
-
-if (!supabaseAnonKey) {
-  throw new Error('Missing environment variable: NEXT_PUBLIC_SUPABASE_ANON_KEY')
-}
-
-// Create Supabase client
-export const supabase = createClient<Database>(supabaseUrl, supabaseAnonKey, {
+// Create Supabase client with enhanced configuration
+export const supabase = createClient<Database>(env.supabase.url, env.supabase.anonKey, {
   auth: {
     autoRefreshToken: true,
     persistSession: true,
-    detectSessionInUrl: true
+    detectSessionInUrl: true,
+    flowType: 'pkce'
   },
   db: {
     schema: 'public'
   },
   global: {
     headers: {
-      'X-Client-Info': 'centomomd-v2'
+      'X-Client-Info': 'centomomd-v2',
+      'X-Application-Name': 'CentomoMD V2'
     }
   }
 })
 
+// Connection test function
+export const testSupabaseConnection = async () => {
+  try {
+    const { data, error } = await supabase
+      .from('users')
+      .select('count(*)')
+      .single()
+    
+    if (error) {
+      console.error('Supabase connection test failed:', error)
+      return { success: false, error: error.message }
+    }
+    
+    console.log('✅ Supabase connection successful')
+    console.log('📊 Database user count:', data?.count || 0)
+    return { success: true, userCount: data?.count || 0 }
+  } catch (error) {
+    console.error('❌ Supabase connection test error:', error)
+    return { success: false, error: error instanceof Error ? error.message : 'Unknown error' }
+  }
+}
+
 // Server-side Supabase client (for API routes)
 export const createServerSupabaseClient = () => {
-  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
-  
-  if (!serviceRoleKey) {
-    throw new Error('Missing environment variable: SUPABASE_SERVICE_ROLE_KEY')
-  }
-
-  return createClient<Database>(supabaseUrl, serviceRoleKey, {
+  return createClient<Database>(env.supabase.url, env.supabase.serviceRoleKey, {
     auth: {
       autoRefreshToken: false,
       persistSession: false
+    },
+    global: {
+      headers: {
+        'X-Client-Info': 'centomomd-v2-server',
+        'X-Application-Name': 'CentomoMD V2 Server'
+      }
     }
   })
 }

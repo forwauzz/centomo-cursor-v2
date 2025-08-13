@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Providers } from '@/components/providers'
 import { Toaster } from '@/components/ui/toaster'
+import { StartupValidation, ValidationStatus } from '@/components/startup-validation'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -65,14 +66,16 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className={`${inter.variable} font-sans antialiased`}>
-        <Providers>
-          <div className="min-h-screen bg-background">
-            {children}
-          </div>
-          <Toaster />
-        </Providers>
-      </body>
+                   <body className={`${inter.variable} font-sans antialiased`}>
+               <Providers>
+                 <StartupValidation />
+                 <div className="min-h-screen bg-background">
+                   {children}
+                 </div>
+                 <Toaster />
+                 <ValidationStatus />
+               </Providers>
+             </body>
     </html>
   )
 }

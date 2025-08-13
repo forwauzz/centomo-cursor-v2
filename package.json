@@ -9,7 +9,9 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "setup-env": "node scripts/setup-env.js",
+    "health-check": "curl http://localhost:5002/api/health"
   },
   "dependencies": {
     "next": "14.0.4",
