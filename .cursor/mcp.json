@@ -1,0 +1,17 @@
+{
+    "mcpServers": {
+      "centomo-dev-assistant": {
+        "command": "node",
+        "args": [
+          "C:\\Users\\alici\\centomo-back-up-server\\enhanced-backup-mcp-server-phase4-orchestrator.js",
+          "--mcp-mode"
+        ],
+        "env": {
+          "MEMORY_BANK_BASE": "C:\\Users\\alici\\centomo-back-up-server",
+          "ORCHESTRATOR_ENABLED": "true",
+          "PROJECT_VERSION": "2.0",
+          "COMPLIANCE_MODE": "PIPEDA_HIPAA"
+        }
+      }
+    }
+  }

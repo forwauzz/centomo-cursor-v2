@@ -1,0 +1,437 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# Production
+/build
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+.env.staging
+.env.production
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+out
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Vercel
+.vercel
+
+# Turbo
+.turbo
+
+# Local development
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# Medical Compliance - Sensitive Data
+# Never commit these files
+patient_data/
+medical_records/
+health_information/
+personal_data/
+sensitive_documents/
+
+# Audit logs (may contain sensitive information)
+audit_logs/
+security_logs/
+access_logs/
+
+# Backup files
+*.backup
+*.bak
+*.old
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.csr
+
+# API keys and secrets (additional protection)
+secrets/
+keys/
+credentials/
+
+# Test files
+test-results/
+coverage/
+.nyc_output/
+
+# Performance monitoring
+.perf/
+
+# Storybook build outputs
+storybook-static/
+
+# Temporary uploads
+uploads/
+temp_uploads/
+
+# Cache directories
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+# Local configuration overrides
+config.local.js
+config.local.json
+
+# Development tools
+.history/
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# Package manager lock files (keep one)
+# yarn.lock
+# package-lock.json
+# pnpm-lock.yaml
+
+# Environment-specific files
+.env.*.local
+.env.development
+.env.test
+.env.production
+.env.staging
+
+# Build artifacts
+build/
+dist/
+.next/
+out/
+
+# TypeScript
+*.tsbuildinfo
+
+# PWA files
+**/public/sw.js
+**/public/workbox-*.js
+**/public/worker-*.js
+**/public/sw.js.map
+**/public/workbox-*.js.map
+**/public/worker-*.js.map
+
+# Sentry Config File
+.sentryclirc
+
+# Local Netlify folder
+.netlify
+
+# Medical Platform Specific
+# Voice recordings (temporary)
+voice_recordings/
+temp_audio/
+
+# Document processing
+processed_docs/
+temp_docs/
+
+# AI model files
+models/
+ai_cache/
+
+# Compliance documentation
+compliance_docs/
+audit_reports/
+
+# Backup and recovery
+backups/
+recovery/
+
+# Monitoring and analytics
+analytics_data/
+monitoring_logs/
+
+# Development tools
+dev_tools/
+debug_logs/
+
+# Security scans
+security_reports/
+vulnerability_scans/
+
+# Performance data
+performance_data/
+load_test_results/
+
+# User sessions (if stored locally)
+sessions/
+user_sessions/
+
+# Temporary medical data
+temp_medical_data/
+pending_records/
+
+# Export files
+exports/
+daily_exports/
+weekly_exports/
+
+# Import files
+imports/
+data_imports/
+
+# Archive files
+archives/
+old_records/
+
+# Compliance and audit
+compliance_logs/
+audit_trails/
+access_logs/
+
+# Development and testing
+test_data/
+mock_data/
+fixtures/
+
+# Documentation builds
+docs_build/
+documentation_build/
+
+# Local development databases
+local_db/
+dev_database/
+
+# Staging data
+staging_data/
+test_patients/
+
+# Production backups (never commit)
+prod_backups/
+live_data_backups/
+
+# Medical compliance - additional protection
+*.medical
+*.health
+*.patient
+*.record
+*.clinical
+
+# HIPAA and PIPEDA compliance
+hipaa_data/
+pipeda_data/
+compliance_data/
+
+# Security and encryption
+encrypted_data/
+secure_files/
+private_keys/
+
+# Development utilities
+dev_utils/
+debug_tools/
+test_helpers/
+
+# Local configuration
+local_config/
+dev_config/
+test_config/
+
+# Temporary files for development
+temp/
+tmp/
+scratch/
+
+# IDE specific
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.idea/workspace.xml
+.idea/tasks.xml
+
+# OS specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
