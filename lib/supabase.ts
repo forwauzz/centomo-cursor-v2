@@ -29,8 +29,7 @@ export const testSupabaseConnection = async () => {
   try {
     const { data, error } = await supabase
       .from('users')
-      .select('count(*)')
-      .single()
+      .select('*', { count: 'exact', head: true })
     
     if (error) {
       console.error('Supabase connection test failed:', error)
@@ -38,8 +37,8 @@ export const testSupabaseConnection = async () => {
     }
     
     console.log('✅ Supabase connection successful')
-    console.log('📊 Database user count:', data?.count || 0)
-    return { success: true, userCount: data?.count || 0 }
+    console.log('📊 Database user count:', data?.length || 0)
+    return { success: true, userCount: data?.length || 0 }
   } catch (error) {
     console.error('❌ Supabase connection test error:', error)
     return { success: false, error: error instanceof Error ? error.message : 'Unknown error' }
