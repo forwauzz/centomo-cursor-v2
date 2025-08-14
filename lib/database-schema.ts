@@ -1,4 +1,4 @@
-import { supabase } from './supabase'
+import { createServerSupabaseClient } from './supabase-admin'
 
 /**
  * Database schema verification utility
@@ -50,6 +50,7 @@ export const verifyDatabaseSchema = async (): Promise<SchemaStatus> => {
 
   for (const table of tables) {
     try {
+      const supabase = createServerSupabaseClient()
       const { error } = await supabase
         .from(table)
         .select('*')

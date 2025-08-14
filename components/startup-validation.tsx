@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { testSupabaseConnection } from '@/lib/supabase'
+import { testClientConnection } from '@/lib/supabase-client'
 import { getEnvironmentConfig } from '@/lib/env'
 import { AlertCircle, CheckCircle, Loader2 } from 'lucide-react'
 
@@ -29,7 +29,7 @@ export function StartupValidation() {
 
         // Test Supabase connection
         console.log('🔍 Testing Supabase connection...')
-        const connectionResult = await testSupabaseConnection()
+        const connectionResult = await testClientConnection()
         
         if (connectionResult.success) {
           setStatus(prev => ({ ...prev, supabase: true }))
@@ -123,7 +123,7 @@ export function ValidationStatus() {
     const checkValidation = async () => {
       try {
         getEnvironmentConfig()
-        const connectionResult = await testSupabaseConnection()
+        const connectionResult = await testClientConnection()
         setIsValid(connectionResult.success)
       } catch {
         setIsValid(false)

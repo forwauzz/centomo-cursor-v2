@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { createServerSupabaseClient, testSupabaseConnection } from '@/lib/supabase'
+import { createServerSupabaseClient, testServerConnection } from '@/lib/supabase-admin'
 import { getEnvironmentConfig } from '@/lib/env'
 import { checkRequiredTables } from '@/lib/database-schema'
 
@@ -9,7 +9,7 @@ export async function GET() {
     const env = getEnvironmentConfig()
     
          // Test Supabase connection
-     const connectionResult = await testSupabaseConnection()
+     const connectionResult = await testServerConnection()
      
      if (!connectionResult.success) {
        return NextResponse.json(

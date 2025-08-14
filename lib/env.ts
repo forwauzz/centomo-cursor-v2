@@ -1,13 +1,14 @@
 /**
  * Environment validation utility for CentomoMD V2
  * Provides comprehensive validation of all required environment variables
+ * Separates client-side and server-side validation for security
  */
 
 interface EnvironmentConfig {
   supabase: {
     url: string
     anonKey: string
-    serviceRoleKey: string
+    serviceRoleKey?: string // Optional for client-side
   }
   app: {
     url: string
@@ -30,14 +31,105 @@ interface EnvironmentConfig {
 }
 
 /**
- * Validates all required environment variables
- * Throws detailed error messages if any are missing or invalid
+ * Validates client-side environment variables (NEXT_PUBLIC_ only)
+ * Safe for browser use - no server secrets
  */
-export const validateEnvironment = (): EnvironmentConfig => {
+export const validateClientEnvironment = (): EnvironmentConfig => {
   const errors: string[] = []
   const warnings: string[] = []
 
-  // Supabase Configuration
+  // Client-side Supabase Configuration (NEXT_PUBLIC_ only)
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+  if (!supabaseUrl) {
+    errors.push('NEXT_PUBLIC_SUPABASE_URL is required')
+  } else if (!supabaseUrl.includes('supabase.co')) {
+    errors.push('NEXT_PUBLIC_SUPABASE_URL appears invalid (should contain supabase.co)')
+  }
+
+  if (!supabaseAnonKey) {
+    errors.push('NEXT_PUBLIC_SUPABASE_ANON_KEY is required')
+  } else if (!supabaseAnonKey.startsWith('eyJ')) {
+    errors.push('NEXT_PUBLIC_SUPABASE_ANON_KEY appears invalid (should start with eyJ)')
+  }
+
+  // Application Configuration
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:5002'
+  const appName = process.env.NEXT_PUBLIC_APP_NAME || 'CentomoMD V2'
+
+  // Security Configuration (client-side only)
+  const nextAuthUrl = process.env.NEXTAUTH_URL || appUrl
+
+  // Feature Flags
+  const voiceDictation = process.env.NEXT_PUBLIC_ENABLE_VOICE_DICTATION === 'true'
+  const aiAssistant = process.env.NEXT_PUBLIC_ENABLE_AI_ASSISTANT === 'true'
+  const realTimeCollaboration = process.env.NEXT_PUBLIC_ENABLE_REAL_TIME_COLLABORATION === 'true'
+
+  // Compliance Configuration
+  const complianceMode = process.env.NEXT_PUBLIC_COMPLIANCE_MODE || 'PIPEDA'
+  const dataRetentionDays = parseInt(process.env.NEXT_PUBLIC_DATA_RETENTION_DAYS || '2555', 10)
+  const auditLogging = process.env.NEXT_PUBLIC_ENABLE_AUDIT_LOGGING === 'true'
+
+  // Check for critical errors
+  if (errors.length > 0) {
+    const errorMessage = `Client Environment Configuration Errors:\n${errors.join('\n')}\n\nPlease check your .env.local file and ensure all NEXT_PUBLIC_ variables are set correctly.`
+    console.error('❌', errorMessage)
+    throw new Error(errorMessage)
+  }
+
+  // Log warnings
+  if (warnings.length > 0) {
+    console.warn('⚠️ Client Environment Warnings:', warnings.join(', '))
+  }
+
+  // Log successful configuration
+  console.log('✅ Client environment configuration validated successfully')
+  console.log(`📱 App: ${appName} (${appUrl})`)
+  console.log(`🔐 Supabase: ${supabaseUrl?.split('//')[1]?.split('.')[0] || 'Unknown'}`)
+  console.log(`🛡️ Compliance: ${complianceMode}`)
+  console.log(`🎯 Features: Voice=${voiceDictation}, AI=${aiAssistant}, Real-time=${realTimeCollaboration}`)
+
+  return {
+    supabase: {
+      url: supabaseUrl!,
+      anonKey: supabaseAnonKey!
+    },
+    app: {
+      url: appUrl,
+      name: appName
+    },
+    security: {
+      nextAuthSecret: '', // Not available on client-side
+      nextAuthUrl
+    },
+    features: {
+      voiceDictation,
+      aiAssistant,
+      realTimeCollaboration
+    },
+    compliance: {
+      mode: complianceMode,
+      dataRetentionDays,
+      auditLogging
+    }
+  }
+}
+
+/**
+ * Validates server-side environment variables (all variables including secrets)
+ * Only for server-side use - includes service role key
+ */
+export const validateServerEnvironment = (): EnvironmentConfig => {
+  // Safety check: ensure this is only called server-side
+  if (typeof window !== 'undefined') {
+    throw new Error('Server environment validation cannot be used in the browser')
+  }
+
+  const errors: string[] = []
+  const warnings: string[] = []
+
+  // Server-side Supabase Configuration (all variables)
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
   const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
@@ -84,18 +176,18 @@ export const validateEnvironment = (): EnvironmentConfig => {
 
   // Check for critical errors
   if (errors.length > 0) {
-    const errorMessage = `Environment Configuration Errors:\n${errors.join('\n')}\n\nPlease check your .env.local file and ensure all required variables are set correctly.`
+    const errorMessage = `Server Environment Configuration Errors:\n${errors.join('\n')}\n\nPlease check your .env.local file and ensure all required variables are set correctly.`
     console.error('❌', errorMessage)
     throw new Error(errorMessage)
   }
 
   // Log warnings
   if (warnings.length > 0) {
-    console.warn('⚠️ Environment Warnings:', warnings.join(', '))
+    console.warn('⚠️ Server Environment Warnings:', warnings.join(', '))
   }
 
   // Log successful configuration
-  console.log('✅ Environment configuration validated successfully')
+  console.log('✅ Server environment configuration validated successfully')
   console.log(`📱 App: ${appName} (${appUrl})`)
   console.log(`🔐 Supabase: ${supabaseUrl?.split('//')[1]?.split('.')[0] || 'Unknown'}`)
   console.log(`🛡️ Compliance: ${complianceMode}`)
@@ -125,6 +217,21 @@ export const validateEnvironment = (): EnvironmentConfig => {
       dataRetentionDays,
       auditLogging
     }
+  }
+}
+
+/**
+ * Validates all required environment variables (legacy function)
+ * @deprecated Use validateClientEnvironment() or validateServerEnvironment() instead
+ */
+export const validateEnvironment = (): EnvironmentConfig => {
+  // Determine if we're on client or server side
+  if (typeof window !== 'undefined') {
+    // Client-side: use client validation
+    return validateClientEnvironment()
+  } else {
+    // Server-side: use server validation
+    return validateServerEnvironment()
   }
 }
 
