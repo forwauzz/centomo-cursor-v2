@@ -1,1 +1,22 @@
-﻿export default function LoginPage() { return <div className="min-h-screen flex items-center justify-center"><div className="text-center"><h1 className="text-2xl font-bold mb-4">CentomoMD V2 Login</h1><p>Enhanced v0 login component coming soon!</p></div></div> }
+﻿"use client"
+
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Checkbox } from "@/components/ui/checkbox"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Shield, Lock, CheckCircle, Cross, FileText, Mic, Brain, Eye, EyeOff, AlertCircle } from "lucide-react"
+import { useToast } from "@/hooks/use-toast"
+import { createClientSupabaseClient } from "@/lib/supabase-client"
+import { useRouter } from "next/navigation"
+
+export default function LoginPage() {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [rememberMe, setRememberMe] = useState(false)
+  const [showPassword, setShowPassword] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const { toast } = useToast()
+  const router = useRouter()
