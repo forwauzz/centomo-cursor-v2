@@ -1,0 +1,1 @@
+﻿export default function LoginPage() { return <div className="min-h-screen flex items-center justify-center"><div className="text-center"><h1 className="text-2xl font-bold mb-4">CentomoMD V2 Login</h1><p>Enhanced v0 login component coming soon!</p></div></div> }
