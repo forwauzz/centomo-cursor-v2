@@ -51,7 +51,7 @@ export const createServerSupabaseClient = () => {
     throw new Error('Server-side Supabase client cannot be used in the browser')
   }
 
-  return createClient<Database>(env.supabaseUrl, env.supabaseServiceRoleKey, {
+  return createClient<Database>(env.supabaseUrl!, env.supabaseServiceRoleKey!, {
     auth: {
       autoRefreshToken: false,
       persistSession: false

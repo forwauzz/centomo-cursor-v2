@@ -65,7 +65,7 @@ export const testSupabaseConnection = async () => {
 
 // Server-side Supabase client (for API routes)
 export const createServerSupabaseClient = () => {
-  return createClient<Database>(env.supabase.url, env.supabase.serviceRoleKey, {
+  return createClient<Database>(env.supabase.url!, env.supabase.serviceRoleKey!, {
     auth: {
       autoRefreshToken: false,
       persistSession: false

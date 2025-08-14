@@ -1,55 +1,17 @@
-import { createClient } from '@supabase/supabase-js'
-import { Database } from '@/types/supabase'
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+import { Database } from './database-schema'
 
-// Client-side environment validation (only checks NEXT_PUBLIC_ variables)
-const validateClientEnvironment = () => {
-  const errors: string[] = []
-  
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+let supabaseClient: ReturnType<typeof createClientComponentClient<Database>> | null = null
 
-  if (!supabaseUrl) {
-    errors.push('NEXT_PUBLIC_SUPABASE_URL is required')
-  } else if (!supabaseUrl.includes('supabase.co')) {
-    errors.push('NEXT_PUBLIC_SUPABASE_URL appears invalid (should contain supabase.co)')
+export function createClientSupabaseClient() {
+  if (!supabaseClient) {
+    supabaseClient = createClientComponentClient<Database>()
   }
-
-  if (!supabaseAnonKey) {
-    errors.push('NEXT_PUBLIC_SUPABASE_ANON_KEY is required')
-  } else if (!supabaseAnonKey.startsWith('eyJ')) {
-    errors.push('NEXT_PUBLIC_SUPABASE_ANON_KEY appears invalid (should start with eyJ)')
-  }
-
-  if (errors.length > 0) {
-    const errorMessage = `Client Environment Configuration Errors:\n${errors.join('\n')}\n\nPlease check your .env.local file and ensure all NEXT_PUBLIC_ variables are set correctly.`
-    console.error('❌', errorMessage)
-    throw new Error(errorMessage)
-  }
-
-  return { supabaseUrl, supabaseAnonKey }
+  return supabaseClient
 }
 
-// Validate client environment
-const env = validateClientEnvironment()
-
-// Create client-side Supabase client (safe for browser)
-export const supabase = createClient<Database>(env.supabaseUrl, env.supabaseAnonKey, {
-  auth: {
-    autoRefreshToken: true,
-    persistSession: true,
-    detectSessionInUrl: true,
-    flowType: 'pkce'
-  },
-  db: {
-    schema: 'public'
-  },
-  global: {
-    headers: {
-      'X-Client-Info': 'centomomd-v2-client',
-      'X-Application-Name': 'CentomoMD V2 Client'
-    }
-  }
-})
+// For backward compatibility
+export const supabase = createClientSupabaseClient()
 
 // Client-side connection test function
 export const testClientConnection = async () => {
@@ -84,6 +46,10 @@ export const handleSupabaseError = (error: any) => {
   
   if (error.code === 'PGRST302') {
     return { error: 'Access denied' }
+  }
+  
+  if (error.status === 401) {
+    return { error: 'JWT token invalid or expired' }
   }
   
   return { error: error.message || 'An unexpected error occurred' }

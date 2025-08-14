@@ -1,9 +1,345 @@
 import { createServerSupabaseClient } from './supabase-admin'
 
 /**
- * Database schema verification utility
- * Checks if required tables exist and are properly configured
+ * Database schema types and verification utility
  */
+
+// Database table types
+export interface Database {
+  public: {
+    Tables: {
+      users: {
+        Row: {
+          id: string
+          email: string
+          password_hash?: string
+          oauth_provider?: string
+          oauth_sub?: string
+          role: 'admin' | 'doctor' | 'staff'
+          status: 'pending' | 'active' | 'suspended'
+          full_name: string
+          created_at: string
+          updated_at: string
+          last_login?: string
+          created_by?: string
+          approved_at?: string
+        }
+        Insert: {
+          id?: string
+          email: string
+          password_hash?: string
+          oauth_provider?: string
+          oauth_sub?: string
+          role: 'admin' | 'doctor' | 'staff'
+          status?: 'pending' | 'active' | 'suspended'
+          full_name: string
+          created_at?: string
+          updated_at?: string
+          last_login?: string
+          created_by?: string
+          approved_at?: string
+        }
+        Update: {
+          id?: string
+          email?: string
+          password_hash?: string
+          oauth_provider?: string
+          oauth_sub?: string
+          role?: 'admin' | 'doctor' | 'staff'
+          status?: 'pending' | 'active' | 'suspended'
+          full_name?: string
+          created_at?: string
+          updated_at?: string
+          last_login?: string
+          created_by?: string
+          approved_at?: string
+        }
+      }
+      doctor_profiles: {
+        Row: {
+          id: string
+          user_id: string
+          doctor_id: string
+          credentials?: string
+          specialty?: string
+          license_number?: string
+          practice_address?: string
+          practice_phone?: string
+          preferences?: any
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          doctor_id?: string
+          credentials?: string
+          specialty?: string
+          license_number?: string
+          practice_address?: string
+          practice_phone?: string
+          preferences?: any
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          user_id?: string
+          doctor_id?: string
+          credentials?: string
+          specialty?: string
+          license_number?: string
+          practice_address?: string
+          practice_phone?: string
+          preferences?: any
+          created_at?: string
+          updated_at?: string
+        }
+      }
+
+      user_invitations: {
+        Row: {
+          id: string
+          email: string
+          role: 'admin' | 'doctor' | 'staff'
+          status: 'pending' | 'accepted' | 'expired'
+          invited_by: string
+          expires_at: string
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          email: string
+          role?: 'admin' | 'doctor' | 'staff'
+          status?: 'pending' | 'accepted' | 'expired'
+          invited_by: string
+          expires_at: string
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          email?: string
+          role?: 'admin' | 'doctor' | 'staff'
+          status?: 'pending' | 'accepted' | 'expired'
+          invited_by?: string
+          expires_at?: string
+          created_at?: string
+          updated_at?: string
+        }
+      }
+      form_sessions: {
+        Row: {
+          id: string
+          user_id: string
+          session_data: any
+          expires_at: string
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          session_data: any
+          expires_at: string
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          user_id?: string
+          session_data?: any
+          expires_at?: string
+          created_at?: string
+          updated_at?: string
+        }
+      }
+      export_tokens: {
+        Row: {
+          id: string
+          user_id: string
+          token: string
+          expires_at: string
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          token: string
+          expires_at: string
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          user_id?: string
+          token?: string
+          expires_at?: string
+          created_at?: string
+        }
+      }
+      form_templates: {
+        Row: {
+          id: string
+          name: string
+          description: string | null
+          template_data: any
+          is_active: boolean
+          created_by: string
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          name: string
+          description?: string | null
+          template_data: any
+          is_active?: boolean
+          created_by: string
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          name?: string
+          description?: string | null
+          template_data?: any
+          is_active?: boolean
+          created_by?: string
+          created_at?: string
+          updated_at?: string
+        }
+      }
+      training_data: {
+        Row: {
+          id: string
+          file_name: string
+          file_url: string
+          file_size: number
+          uploaded_by: string
+          status: 'pending' | 'processed' | 'failed'
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          file_name: string
+          file_url: string
+          file_size: number
+          uploaded_by: string
+          status?: 'pending' | 'processed' | 'failed'
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          file_name?: string
+          file_url?: string
+          file_size?: number
+          uploaded_by?: string
+          status?: 'pending' | 'processed' | 'failed'
+          created_at?: string
+          updated_at?: string
+        }
+      }
+      ai_training_metrics: {
+        Row: {
+          id: string
+          model_version: string
+          accuracy: number
+          training_samples: number
+          training_duration: number
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          model_version: string
+          accuracy: number
+          training_samples: number
+          training_duration: number
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          model_version?: string
+          accuracy?: number
+          training_samples?: number
+          training_duration?: number
+          created_at?: string
+        }
+      }
+      admin_actions: {
+        Row: {
+          id: string
+          admin_id: string
+          action_type: string
+          action_data: any
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          admin_id: string
+          action_type: string
+          action_data: any
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          admin_id?: string
+          action_type?: string
+          action_data?: any
+          created_at?: string
+        }
+      }
+      system_config: {
+        Row: {
+          id: string
+          key: string
+          value: any
+          description: string | null
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          key: string
+          value: any
+          description?: string | null
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          key?: string
+          value?: any
+          description?: string | null
+          updated_at?: string
+        }
+      }
+      system_logs: {
+        Row: {
+          id: string
+          level: 'info' | 'warning' | 'error'
+          message: string
+          metadata: any
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          level?: 'info' | 'warning' | 'error'
+          message: string
+          metadata?: any
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          level?: 'info' | 'warning' | 'error'
+          message?: string
+          metadata?: any
+          created_at?: string
+        }
+      }
+    }
+  }
+}
 
 export interface SchemaStatus {
   users: boolean

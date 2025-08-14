@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { useToast } from "@/hooks/use-toast"
-import { supabase } from "@/lib/supabase-client"
+import { createClientSupabaseClient } from "@/lib/supabase-client"
 import { Lock, Loader2, Shield, Cross } from "lucide-react"
 
 export default function LoginPage() {
@@ -14,6 +14,7 @@ export default function LoginPage() {
   
   const router = useRouter()
   const { toast } = useToast()
+  const supabase = createClientSupabaseClient()
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
