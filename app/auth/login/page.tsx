@@ -3,19 +3,19 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { supabase } from "@/lib/supabase-client"
+import { useToast } from "@/hooks/use-toast"
 
 export default function LoginPage() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState("")
   
   const router = useRouter()
+  const { toast } = useToast()
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
-    setError("")
 
     try {
       const { data, error } = await supabase.auth.signInWithPassword({
@@ -28,12 +28,30 @@ export default function LoginPage() {
       }
 
       if (data.user) {
-        // Success - redirect to dashboard
+        toast({
+          title: "Login Successful",
+          description: "Welcome back to CentomoMD!",
+        })
         router.replace('/dashboard')
       }
     } catch (error: any) {
       console.error('Login error:', error)
-      setError(error.message || "An unexpected error occurred.")
+      
+      let errorMessage = "An unexpected error occurred. Please try again."
+      
+      if (error.message?.includes('Invalid login credentials')) {
+        errorMessage = "Invalid email or password. Please check your credentials."
+      } else if (error.message?.includes('Email not confirmed')) {
+        errorMessage = "Please check your email and confirm your account before signing in."
+      } else if (error.message?.includes('Too many requests')) {
+        errorMessage = "Too many login attempts. Please wait a moment before trying again."
+      }
+
+      toast({
+        title: "Login Failed",
+        description: errorMessage,
+        variant: "destructive",
+      })
     } finally {
       setIsLoading(false)
     }
@@ -44,12 +62,6 @@ export default function LoginPage() {
       <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
         <h1 className="text-2xl font-bold text-center mb-6">CentomoMD Login</h1>
         <p className="text-gray-600 text-center mb-8">Enhanced v0 authentication integration in progress...</p>
-        
-        {error && (
-          <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">
-            <p className="text-red-700 text-sm">{error}</p>
-          </div>
-        )}
         
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
