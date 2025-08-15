@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
-import { Database } from '@/types/supabase'
+import { Database } from '@/lib/database-schema'
 
 // Server-side environment validation (checks all variables including secrets)
 const validateServerEnvironment = () => {
@@ -51,7 +51,7 @@ export const createServerSupabaseClient = () => {
     throw new Error('Server-side Supabase client cannot be used in the browser')
   }
 
-  return createClient<Database>(env.supabaseUrl, env.supabaseServiceRoleKey, {
+  return createClient<Database>(env.supabaseUrl!, env.supabaseServiceRoleKey!, {
     auth: {
       autoRefreshToken: false,
       persistSession: false

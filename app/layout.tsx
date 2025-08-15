@@ -1,43 +1,35 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { Providers } from '@/components/providers'
-import { Toaster } from '@/components/ui/toaster'
-import { StartupValidation, ValidationStatus } from '@/components/startup-validation'
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import { Providers } from "@/components/providers"
 
-const inter = Inter({ 
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: {
-    default: 'CentomoMD V2 - Medical Documentation Platform',
-    template: '%s | CentomoMD V2'
-  },
-  description: 'Professional medical documentation platform for healthcare providers in Quebec. Secure, compliant, and efficient patient record management.',
-  keywords: ['medical documentation', 'healthcare', 'patient records', 'Quebec healthcare', 'medical software'],
-  authors: [{ name: 'CentomoMD Team' }],
-  creator: 'CentomoMD',
-  publisher: 'CentomoMD',
+  title: "CentomoMD - Medical Documentation Platform",
+  description: "Professional medical documentation platform for CNESST reports with AI-powered voice recording and Quebec healthcare compliance.",
+  keywords: "medical documentation, CNESST, healthcare, Quebec, voice recording, AI, medical reports",
+  authors: [{ name: "CentomoMD Team" }],
+  creator: "CentomoMD",
+  publisher: "CentomoMD",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:5002"),
   openGraph: {
-    type: 'website',
-    locale: 'en_CA',
-    url: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
-    title: 'CentomoMD V2 - Medical Documentation Platform',
-    description: 'Professional medical documentation platform for healthcare providers in Quebec.',
-    siteName: 'CentomoMD V2',
+    title: "CentomoMD - Medical Documentation Platform",
+    description: "Professional medical documentation platform for CNESST reports",
+    url: "/",
+    siteName: "CentomoMD",
+    locale: "en_CA",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'CentomoMD V2 - Medical Documentation Platform',
-    description: 'Professional medical documentation platform for healthcare providers in Quebec.',
+    card: "summary_large_image",
+    title: "CentomoMD - Medical Documentation Platform",
+    description: "Professional medical documentation platform for CNESST reports",
   },
   robots: {
     index: false,
@@ -48,7 +40,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+    google: process.env.GOOGLE_SITE_VERIFICATION,
   },
 }
 
@@ -60,22 +52,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <meta name="theme-color" content="#0066CC" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="CentomoMD" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
+        {/* Manifest temporarily disabled due to Next.js routing issues */}
       </head>
-                   <body className={`${inter.variable} font-sans antialiased`}>
-               <Providers>
-                 <StartupValidation />
-                 <div className="min-h-screen bg-background">
-                   {children}
-                 </div>
-                 <Toaster />
-                 <ValidationStatus />
-               </Providers>
-             </body>
+      <body className={inter.className}>
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   )
 }
