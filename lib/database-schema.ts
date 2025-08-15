@@ -337,6 +337,153 @@ export interface Database {
           created_at?: string
         }
       }
+      // NEW TABLES - Missing from current schema
+      forms: {
+        Row: {
+          id: string
+          user_id: string
+          patient_name: string
+          patient_id: string
+          form_type: string
+          status: 'draft' | 'in-progress' | 'completed' | 'archived'
+          created_at: string
+          updated_at: string
+          completed_at?: string
+          template_id?: string
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          patient_name: string
+          patient_id: string
+          form_type: string
+          status?: 'draft' | 'in-progress' | 'completed' | 'archived'
+          created_at?: string
+          updated_at?: string
+          completed_at?: string
+          template_id?: string
+        }
+        Update: {
+          id?: string
+          user_id?: string
+          patient_name?: string
+          patient_id?: string
+          form_type?: string
+          status?: 'draft' | 'in-progress' | 'completed' | 'archived'
+          created_at?: string
+          updated_at?: string
+          completed_at?: string
+          template_id?: string
+        }
+      }
+      form_sections: {
+        Row: {
+          id: string
+          form_id: string
+          section_name: string
+          section_data: any
+          completed: boolean
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          form_id: string
+          section_name: string
+          section_data?: any
+          completed?: boolean
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          form_id?: string
+          section_name?: string
+          section_data?: any
+          completed?: boolean
+          created_at?: string
+          updated_at?: string
+        }
+      }
+      exports: {
+        Row: {
+          id: string
+          form_id: string
+          user_id: string
+          export_type: 'PDF' | 'Word' | 'XML' | 'JSON'
+          status: 'processing' | 'completed' | 'failed'
+          file_url?: string
+          file_size?: number
+          created_at: string
+          completed_at?: string
+          error_message?: string
+        }
+        Insert: {
+          id?: string
+          form_id: string
+          user_id: string
+          export_type: 'PDF' | 'Word' | 'XML' | 'JSON'
+          status?: 'processing' | 'completed' | 'failed'
+          file_url?: string
+          file_size?: number
+          created_at?: string
+          completed_at?: string
+          error_message?: string
+        }
+        Update: {
+          id?: string
+          form_id?: string
+          user_id?: string
+          export_type?: 'PDF' | 'Word' | 'XML' | 'JSON'
+          status?: 'processing' | 'completed' | 'failed'
+          file_url?: string
+          file_size?: number
+          created_at?: string
+          completed_at?: string
+          error_message?: string
+        }
+      }
+      voice_sessions: {
+        Row: {
+          id: string
+          user_id: string
+          form_id?: string
+          session_data: any
+          audio_url?: string
+          transcription?: string
+          duration: number
+          quality: 'excellent' | 'good' | 'poor'
+          status: 'recording' | 'processing' | 'completed' | 'failed'
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          form_id?: string
+          session_data?: any
+          audio_url?: string
+          transcription?: string
+          duration?: number
+          quality?: 'excellent' | 'good' | 'poor'
+          status?: 'recording' | 'processing' | 'completed' | 'failed'
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          user_id?: string
+          form_id?: string
+          session_data?: any
+          audio_url?: string
+          transcription?: string
+          duration?: number
+          quality?: 'excellent' | 'good' | 'poor'
+          status?: 'recording' | 'processing' | 'completed' | 'failed'
+          created_at?: string
+          updated_at?: string
+        }
+      }
     }
   }
 }
@@ -353,6 +500,11 @@ export interface SchemaStatus {
   admin_actions: boolean
   system_config: boolean
   system_logs: boolean
+  // NEW TABLES
+  forms: boolean
+  form_sections: boolean
+  exports: boolean
+  voice_sessions: boolean
 }
 
 export const verifyDatabaseSchema = async (): Promise<SchemaStatus> => {
@@ -367,7 +519,12 @@ export const verifyDatabaseSchema = async (): Promise<SchemaStatus> => {
     ai_training_metrics: false,
     admin_actions: false,
     system_config: false,
-    system_logs: false
+    system_logs: false,
+    // NEW TABLES
+    forms: false,
+    form_sections: false,
+    exports: false,
+    voice_sessions: false
   }
 
   const tables = [
@@ -381,7 +538,12 @@ export const verifyDatabaseSchema = async (): Promise<SchemaStatus> => {
     'ai_training_metrics',
     'admin_actions',
     'system_config',
-    'system_logs'
+    'system_logs',
+    // NEW TABLES
+    'forms',
+    'form_sections',
+    'exports',
+    'voice_sessions'
   ]
 
   for (const table of tables) {

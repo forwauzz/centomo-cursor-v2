@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { Providers } from "@/components/providers"
-import MedicalLayout from "@/components/layout/medical-layout"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:5002"),
   openGraph: {
     title: "CentomoMD - Medical Documentation Platform",
     description: "Professional medical documentation platform for CNESST reports",
@@ -60,13 +59,11 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="CentomoMD" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
+        {/* Manifest temporarily disabled due to Next.js routing issues */}
       </head>
       <body className={inter.className}>
         <Providers>
-          <MedicalLayout>
-            {children}
-          </MedicalLayout>
+          {children}
         </Providers>
       </body>
     </html>

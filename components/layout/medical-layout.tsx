@@ -1,272 +1,151 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { useRouter, usePathname } from "next/navigation"
-import { Database } from "@/lib/database-schema"
-import { createClientSupabaseClient } from "@/lib/supabase-client"
+import { useState, useEffect, memo } from "react"
+import { usePathname } from "next/navigation"
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
+import { Database as DatabaseType } from "@/lib/database-schema"
 import MedicalSidebar from "@/components/navigation/medical-sidebar"
-import { Card } from "@/components/ui/card"
-import { FileText, Loader2 } from "lucide-react"
+import { useLanguage } from "@/context/LanguageContext"
 
-type User = Database['public']['Tables']['users']['Row']
+type User = DatabaseType['public']['Tables']['users']['Row']
 
-interface MedicalLayoutProps {
-  children: React.ReactNode
-}
-
-export default function MedicalLayout({ children }: MedicalLayoutProps) {
+const MedicalLayoutContent = memo(({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
   
-  const router = useRouter()
   const pathname = usePathname()
-  const supabase = createClientSupabaseClient()
+  const supabase = createClientComponentClient<DatabaseType>()
+  const { t } = useLanguage()
 
-  // Single authentication check function
-  const checkAuthAndLoadUser = async () => {
+  // Load user data for display purposes
+  const loadUserData = async () => {
     try {
-      console.log('🔍 Starting auth check...')
+      setLoading(true)
       
       // Get current session
-      const { data: { session }, error: sessionError } = await supabase.auth.getSession()
+      const { data: { session } } = await supabase.auth.getSession()
       
-      if (sessionError) {
-        console.error('❌ Session error:', sessionError)
-        setIsAuthenticated(false)
-        setUser(null)
-        if (!pathname.startsWith('/auth/')) {
-          router.push('/auth/login')
-        }
-        return
-      }
-
-      if (!session?.user) {
-        console.log('❌ No session found')
-        setIsAuthenticated(false)
-        setUser(null)
-        if (!pathname.startsWith('/auth/')) {
-          router.push('/auth/login')
-        }
-        return
-      }
-
-      console.log('✅ Session found for user:', session.user.email)
-      console.log('🔍 Auth UID:', session.user.id)
-      
-      // Set authenticated immediately to prevent redirect loop
-      setIsAuthenticated(true)
-
-      // Try to get user profile
-      const { data: userData, error: userError } = await supabase
-        .from('users')
-        .select('*')
-        .eq('id', session.user.id)
-        .single()
-
-      if (userData) {
-        console.log('✅ User profile loaded')
-        setUser(userData)
-        
-        // Handle redirects only if on root path
-        if (pathname === '/') {
-          if (userData.role === 'admin') {
-            router.push('/admin/dashboard')
-          } else {
-            router.push('/dashboard')
-          }
-        }
-      } else if (userError?.code === 'PGRST116') {
-        console.log('🔄 Creating new user profile...')
-        
-        // Create user profile using auth user ID
-        const newUserData = {
-          id: session.user.id, // This matches auth.uid()
-          email: session.user.email!,
-          oauth_provider: session.user.app_metadata?.provider || 'email',
-          oauth_sub: session.user.id,
-          role: 'doctor' as const,
-          status: 'active' as const,
-          full_name: session.user.user_metadata?.full_name || 
-                    session.user.user_metadata?.name || 
-                    session.user.email!.split('@')[0] || 'User'
-        }
-
-        const { data: createdUser, error: createError } = await supabase
+      if (session?.user) {
+        // Try to get user profile
+        const { data: userData } = await supabase
           .from('users')
-          .insert([newUserData])
-          .select()
+          .select('*')
+          .eq('id', session.user.id)
           .single()
 
-        if (createdUser && !createError) {
-          console.log('✅ User profile created successfully')
-          setUser(createdUser)
-          
-          // Redirect new users to dashboard
-          if (pathname === '/') {
-            router.push('/dashboard')
-          }
-        } else {
-          console.error('❌ Failed to create user profile:', createError)
-          // Keep authenticated but without profile
+        if (userData) {
+          setUser(userData)
         }
-      } else {
-        console.error('❌ Database error fetching user:', userError)
-        // Keep authenticated but log the error
       }
-
     } catch (error) {
-      console.error('❌ Authentication check failed:', error)
-      // Don't change auth state on unexpected errors
+      console.error('Error loading user data:', error)
     } finally {
       setLoading(false)
     }
   }
 
-  // Main authentication effect
   useEffect(() => {
-    checkAuthAndLoadUser()
+    // For public routes, just render children directly
+    if (pathname.startsWith('/auth/') || pathname === '/') {
+      setLoading(false)
+      return
+    }
 
-    // Set up auth state listener
+    // For protected routes, load user data for display
+    loadUserData()
+
+    // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event: string, session: any) => {
-        console.log('🔄 Auth state change:', event)
-        
-        if (event === 'SIGNED_OUT') {
-          console.log('🔄 User signed out')
+      async (event, session) => {
+        if (event === 'SIGNED_IN' && session) {
+          await loadUserData()
+        } else if (event === 'SIGNED_OUT') {
           setUser(null)
-          setIsAuthenticated(false)
-          router.push('/auth/login')
-        } else if (event === 'SIGNED_IN' && session?.user) {
-          console.log('🔄 User signed in, reloading page to refresh state')
-          // Reload page to ensure clean state
-          window.location.reload()
-        } else if (event === 'TOKEN_REFRESHED' && session?.user) {
-          console.log('🔄 Token refreshed')
-          // Token was refreshed, no need to reload
         }
       }
     )
 
-    return () => {
-      subscription.unsubscribe()
-    }
-  }, []) // Empty dependency array - only run once
+    return () => subscription.unsubscribe()
+  }, [supabase, pathname])
 
-  // Show loading state
-  if (loading) {
-    return (
-      <div className="flex h-screen bg-gray-50">
-        <div className="flex-1 flex items-center justify-center">
-          <Card className="p-8 text-center">
-            <Loader2 className="w-8 h-8 animate-spin mx-auto mb-4 text-blue-600" />
-            <h2 className="text-lg font-semibold text-gray-900 mb-2">Loading CentomoMD</h2>
-            <p className="text-gray-600">Initializing medical documentation platform...</p>
-          </Card>
-        </div>
-      </div>
-    )
-  }
-
-  // Don't show sidebar on auth pages
-  if (pathname.startsWith('/auth/')) {
+  // For public routes, render children directly
+  if (pathname.startsWith('/auth/') || pathname === '/') {
     return <>{children}</>
   }
 
-  // Show layout for authenticated users
-  if (isAuthenticated) {
+  // Show loading state for protected routes
+  if (loading) {
     return (
-      <div className="flex h-screen bg-gray-50 overflow-hidden">
-        {/* Sidebar */}
-        <MedicalSidebar />
-        
-        {/* Main Content Area */}
-        <div className="flex-1 flex flex-col">
-          {/* Content Header */}
-          <div className="bg-white border-b border-gray-200 p-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <h1 className="text-2xl font-semibold text-gray-900">
-                  {getPageTitle(pathname, user?.role || 'doctor')}
-                </h1>
-                <p className="text-gray-600 mt-1">
-                  {getPageDescription(pathname, user?.role || 'doctor')}
-                </p>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <FileText className="w-5 h-5 text-white" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Main Content */}
-          <div className="flex-1 p-6 overflow-y-auto">
-            {children}
-          </div>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600">{t('common.loading')}</p>
         </div>
       </div>
     )
   }
 
-  // Fallback for unauthenticated users (shouldn't reach here normally)
+  // Get page title and description based on current path
+  const getPageInfo = () => {
+    const isAdmin = user?.role === 'admin'
+    
+    switch (pathname) {
+      case '/dashboard':
+        return {
+          title: t('nav.dashboard'),
+          description: t('dashboard.manage_docs')
+        }
+      case '/admin/dashboard':
+        return {
+          title: t('admin.dashboard'),
+          description: t('admin.system_admin')
+        }
+      case '/settings':
+        return {
+          title: t('nav.settings'),
+          description: t('admin.configure_platform')
+        }
+      default:
+        if (pathname.startsWith('/admin/')) {
+          return {
+            title: t('admin.dashboard'),
+            description: t('admin.system_admin')
+          }
+        }
+        return {
+          title: t('nav.dashboard'),
+          description: t('dashboard.manage_docs')
+        }
+    }
+  }
+
+  const pageInfo = getPageInfo()
+
   return (
     <div className="flex h-screen bg-gray-50">
-      <div className="flex-1 flex items-center justify-center">
-        <Card className="p-8 text-center">
-          <FileText className="w-16 h-16 mx-auto mb-4 text-gray-300" />
-          <h2 className="text-lg font-semibold text-gray-900 mb-2">Authentication Required</h2>
-          <p className="text-gray-600">Please log in to access CentomoMD</p>
-        </Card>
+      <MedicalSidebar />
+      <div className="flex-1 flex flex-col overflow-hidden">
+        {/* Header */}
+        <header className="bg-white border-b border-gray-200 px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900">{pageInfo.title}</h1>
+              <p className="text-gray-600">{pageInfo.description}</p>
+            </div>
+          </div>
+        </header>
+        
+        {/* Main Content */}
+        <main className="flex-1 overflow-y-auto p-6">
+          {children}
+        </main>
       </div>
     </div>
   )
-}
+})
 
-// Helper functions remain the same
-function getPageTitle(pathname: string, userRole: string): string {
-  const titles: Record<string, string> = {
-    '/dashboard': 'Doctor Dashboard',
-    '/admin/dashboard': 'Admin Dashboard',
-    '/admin/users': 'User Management',
-    '/admin/training': 'AI Training',
-    '/admin/analytics': 'Analytics',
-    '/form/new': 'New Medical Form',
-    '/form/drafts': 'Form Drafts',
-    '/settings': 'Settings',
-    '/form/section1': 'Patient Information',
-    '/form/section2': 'Physician Information',
-    '/form/section3': 'Report Overview',
-    '/form/section4': 'Identification & Background',
-    '/form/section5': 'Medical History',
-    '/form/section6': 'Current Treatment',
-    '/form/section7': 'Physical Examination',
-    '/form/section8': 'Subjective Assessment',
-    '/form/section9': 'Physical Exam Tables',
-    '/form/section10': 'Additional Tests',
-    '/form/section11': 'Medical Conclusions',
-  }
+MedicalLayoutContent.displayName = 'MedicalLayoutContent'
 
-  return titles[pathname] || 'CentomoMD'
-}
-
-function getPageDescription(pathname: string, userRole: string): string {
-  const descriptions: Record<string, string> = {
-    '/dashboard': 'Manage your medical forms and patient documentation',
-    '/admin/dashboard': 'Administrative dashboard for system management',
-    '/admin/users': 'Manage user accounts and permissions',
-    '/admin/training': 'Train and improve AI documentation capabilities',
-    '/admin/analytics': 'View system analytics and usage statistics',
-    '/form/new': 'Create a new CNESST medical report',
-    '/form/drafts': 'View and edit your form drafts',
-    '/settings': 'Configure your account and preferences',
-  }
-
-  if (pathname.startsWith('/form/section')) {
-    const sectionNumber = pathname.split('/').pop()
-    return `Section ${sectionNumber} of the CNESST medical form`
-  }
-
-  return descriptions[pathname] || 'Medical documentation platform'
+export default function MedicalLayout({ children }: { children: React.ReactNode }) {
+  return <MedicalLayoutContent>{children}</MedicalLayoutContent>
 }

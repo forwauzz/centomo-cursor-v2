@@ -25,10 +25,11 @@ import {
   Brain
 } from "lucide-react"
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
-import { Database } from "@/lib/database-schema"
+import { Database as DatabaseType } from "@/lib/database-schema"
+import { useLanguage } from "@/context/LanguageContext"
 
-type UserProfile = Database['public']['Tables']['doctor_profiles']['Row']
-type User = Database['public']['Tables']['users']['Row']
+type UserProfile = DatabaseType['public']['Tables']['doctor_profiles']['Row']
+type User = DatabaseType['public']['Tables']['users']['Row']
 
 const sections = [
   { id: 1, title: "Patient Information", titleFr: "Information du patient", path: "/form/section1", completed: true },
@@ -60,14 +61,14 @@ const doctorNavItems = [
 export default function MedicalSidebar() {
   const [currentSection, setCurrentSection] = useState(1)
   const [isRecording, setIsRecording] = useState(false)
-  const [language, setLanguage] = useState<"en" | "fr">("en")
   const [user, setUser] = useState<User | null>(null)
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null)
   const [loading, setLoading] = useState(true)
   
   const router = useRouter()
   const pathname = usePathname()
-  const supabase = createClientComponentClient<Database>()
+  const supabase = createClientComponentClient<DatabaseType>()
+  const { language, setLanguage, t, getText } = useLanguage()
 
   const completedSections = sections.filter((s) => s.completed).length
   const progressPercentage = (completedSections / sections.length) * 100
@@ -91,13 +92,17 @@ export default function MedicalSidebar() {
             
             // Fetch doctor profile if user is a doctor
             if (userData.role === 'doctor') {
-              const { data: profileData } = await supabase
+              const { data: profileData, error: profileError } = await supabase
                 .from('doctor_profiles')
                 .select('*')
                 .eq('user_id', authUser.id)
-                .single()
               
-              setUserProfile(profileData)
+              if (profileError) {
+                console.warn('Doctor profile not found:', profileError)
+                setUserProfile(null)
+              } else {
+                setUserProfile(profileData?.[0] || null)
+              }
             }
           }
         }
@@ -122,10 +127,8 @@ export default function MedicalSidebar() {
   }
 
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "en" ? "fr" : "en"))
+    setLanguage(language === "en" ? "fr" : "en")
   }
-
-  const getText = (en: string, fr: string) => (language === "en" ? en : fr)
 
   const isAdmin = user?.role === 'admin'
   const isDoctor = user?.role === 'doctor'
