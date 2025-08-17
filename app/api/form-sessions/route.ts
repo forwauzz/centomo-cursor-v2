@@ -6,10 +6,23 @@ export async function GET(request: NextRequest) {
   try {
     const supabase = createServerSupabaseClient()
     
-    // Get user from auth context
-    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    // Get the authorization header
+    const authHeader = request.headers.get('authorization')
+    if (!authHeader) {
+      return NextResponse.json({ error: 'Unauthorized - No auth header' }, { status: 401 })
+    }
+
+    // Extract the token from the Authorization header
+    const token = authHeader.replace('Bearer ', '')
+    if (!token) {
+      return NextResponse.json({ error: 'Unauthorized - No token' }, { status: 401 })
+    }
+
+    // Verify the user is authenticated using the token
+    const { data: { user }, error: authError } = await supabase.auth.getUser(token)
     if (authError || !user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      console.error('Auth error:', authError)
+      return NextResponse.json({ error: 'Unauthorized - Invalid token' }, { status: 401 })
     }
 
     const { searchParams } = new URL(request.url)
@@ -44,10 +57,23 @@ export async function POST(request: NextRequest) {
   try {
     const supabase = createServerSupabaseClient()
     
-    // Get user from auth context
-    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    // Get the authorization header
+    const authHeader = request.headers.get('authorization')
+    if (!authHeader) {
+      return NextResponse.json({ error: 'Unauthorized - No auth header' }, { status: 401 })
+    }
+
+    // Extract the token from the Authorization header
+    const token = authHeader.replace('Bearer ', '')
+    if (!token) {
+      return NextResponse.json({ error: 'Unauthorized - No token' }, { status: 401 })
+    }
+
+    // Verify the user is authenticated using the token
+    const { data: { user }, error: authError } = await supabase.auth.getUser(token)
     if (authError || !user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      console.error('Auth error:', authError)
+      return NextResponse.json({ error: 'Unauthorized - Invalid token' }, { status: 401 })
     }
 
     const body = await request.json()
@@ -88,10 +114,23 @@ export async function PUT(request: NextRequest) {
   try {
     const supabase = createServerSupabaseClient()
     
-    // Get user from auth context
-    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    // Get the authorization header
+    const authHeader = request.headers.get('authorization')
+    if (!authHeader) {
+      return NextResponse.json({ error: 'Unauthorized - No auth header' }, { status: 401 })
+    }
+
+    // Extract the token from the Authorization header
+    const token = authHeader.replace('Bearer ', '')
+    if (!token) {
+      return NextResponse.json({ error: 'Unauthorized - No token' }, { status: 401 })
+    }
+
+    // Verify the user is authenticated using the token
+    const { data: { user }, error: authError } = await supabase.auth.getUser(token)
     if (authError || !user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      console.error('Auth error:', authError)
+      return NextResponse.json({ error: 'Unauthorized - Invalid token' }, { status: 401 })
     }
 
     const body = await request.json()
@@ -145,10 +184,23 @@ export async function DELETE(request: NextRequest) {
   try {
     const supabase = createServerSupabaseClient()
     
-    // Get user from auth context
-    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    // Get the authorization header
+    const authHeader = request.headers.get('authorization')
+    if (!authHeader) {
+      return NextResponse.json({ error: 'Unauthorized - No auth header' }, { status: 401 })
+    }
+
+    // Extract the token from the Authorization header
+    const token = authHeader.replace('Bearer ', '')
+    if (!token) {
+      return NextResponse.json({ error: 'Unauthorized - No token' }, { status: 401 })
+    }
+
+    // Verify the user is authenticated using the token
+    const { data: { user }, error: authError } = await supabase.auth.getUser(token)
     if (authError || !user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      console.error('Auth error:', authError)
+      return NextResponse.json({ error: 'Unauthorized - Invalid token' }, { status: 401 })
     }
 
     const { searchParams } = new URL(request.url)

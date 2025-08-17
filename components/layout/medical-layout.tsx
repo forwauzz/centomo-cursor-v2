@@ -1,11 +1,13 @@
 "use client"
 
 import { useState, useEffect, memo } from "react"
-import { usePathname } from "next/navigation"
+import { usePathname, useSearchParams, useRouter } from "next/navigation"
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
 import { Database as DatabaseType } from "@/lib/database-schema"
 import MedicalSidebar from "@/components/navigation/medical-sidebar"
 import { useLanguage } from "@/context/LanguageContext"
+import { Button } from "@/components/ui/button"
+import { ChevronLeft, ChevronRight, Save } from "lucide-react"
 
 type User = DatabaseType['public']['Tables']['users']['Row']
 
@@ -14,6 +16,8 @@ const MedicalLayoutContent = memo(({ children }: { children: React.ReactNode }) 
   const [loading, setLoading] = useState(true)
   
   const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const router = useRouter()
   const supabase = createClientComponentClient<DatabaseType>()
   const { t } = useLanguage()
 
@@ -121,6 +125,41 @@ const MedicalLayoutContent = memo(({ children }: { children: React.ReactNode }) 
 
   const pageInfo = getPageInfo()
 
+  // Form navigation logic
+  const formId = searchParams.get('formId')
+  const isFormSection = pathname.startsWith('/form/section')
+  
+  const getFormNavigation = () => {
+    if (!formId || !isFormSection) return null
+
+    const sections = [
+      { path: '/form/section7', name: 'Section 7', title: 'Physical Examination' },
+      { path: '/form/section8', name: 'Section 8', title: 'Subjective Assessment' },
+      { path: '/form/section11', name: 'Section 11', title: 'Medical Conclusions' }
+    ]
+
+    const currentIndex = sections.findIndex(section => section.path === pathname)
+    const hasPrevious = currentIndex > 0
+    const hasNext = currentIndex < sections.length - 1
+
+    const navigateToSection = (direction: 'prev' | 'next') => {
+      const targetIndex = direction === 'prev' ? currentIndex - 1 : currentIndex + 1
+      const targetSection = sections[targetIndex]
+      if (targetSection) {
+        router.push(`${targetSection.path}?formId=${formId}`)
+      }
+    }
+
+    return {
+      currentSection: sections[currentIndex],
+      hasPrevious,
+      hasNext,
+      navigateToSection
+    }
+  }
+
+  const formNavigation = getFormNavigation()
+
   return (
     <div className="flex h-screen bg-gray-50">
       <MedicalSidebar />
@@ -131,7 +170,46 @@ const MedicalLayoutContent = memo(({ children }: { children: React.ReactNode }) 
             <div>
               <h1 className="text-2xl font-bold text-gray-900">{pageInfo.title}</h1>
               <p className="text-gray-600">{pageInfo.description}</p>
+              {formNavigation && (
+                <p className="text-sm text-blue-600 mt-1">
+                  {formNavigation.currentSection.name}: {formNavigation.currentSection.title}
+                </p>
+              )}
             </div>
+            
+            {/* Form Navigation Buttons */}
+            {formNavigation && (
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => formNavigation.navigateToSection('prev')}
+                  disabled={!formNavigation.hasPrevious}
+                >
+                  <ChevronLeft className="w-4 h-4 mr-1" />
+                  Previous
+                </Button>
+                
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => formNavigation.navigateToSection('next')}
+                  disabled={!formNavigation.hasNext}
+                >
+                  Next
+                  <ChevronRight className="w-4 h-4 ml-1" />
+                </Button>
+                
+                <Button
+                  variant="default"
+                  size="sm"
+                  onClick={() => router.push(`/form/drafts`)}
+                >
+                  <Save className="w-4 h-4 mr-1" />
+                  Save & Exit
+                </Button>
+              </div>
+            )}
           </div>
         </header>
         

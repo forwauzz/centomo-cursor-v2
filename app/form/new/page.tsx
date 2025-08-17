@@ -40,16 +40,40 @@ export default function NewFormPage() {
         throw new Error('User not authenticated')
       }
 
+      // Try to find a default template for CNESST forms
+      let templateId = null
+      try {
+        const { data: template } = await supabase
+          .from('form_templates')
+          .select('id')
+          .eq('template_name', 'CNESST Default')
+          .eq('is_default', true)
+          .single()
+        
+        if (template) {
+          templateId = template.id
+        }
+      } catch (templateError) {
+        console.warn('No default template found, proceeding without template_id')
+      }
+
       // Create form in database
+      const formDataToInsert: any = {
+        user_id: user.id,
+        patient_name: formData.patientName,
+        patient_id: formData.patientId,
+        form_type: formData.formType,
+        status: 'draft'
+      }
+
+      // Only add template_id if we found one
+      if (templateId) {
+        formDataToInsert.template_id = templateId
+      }
+
       const { data: form, error: formError } = await supabase
         .from('forms')
-        .insert({
-          user_id: user.id,
-          patient_name: formData.patientName,
-          patient_id: formData.patientId,
-          form_type: formData.formType,
-          status: 'draft'
-        })
+        .insert(formDataToInsert)
         .select()
         .single()
 

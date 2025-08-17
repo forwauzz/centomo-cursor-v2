@@ -11,7 +11,11 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "setup-env": "node scripts/setup-env.js",
-    "health-check": "curl http://localhost:5002/api/health"
+    "health-check": "curl http://localhost:5002/api/health",
+    "test:section7": "node scripts/test-section7-basic.js",
+    "test:section7:headless": "NODE_ENV=test node scripts/test-section7-basic.js",
+    "test:section7:full": "node scripts/test-section7.js",
+    "test:section7:simple": "node scripts/simple-test.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
@@ -41,6 +45,7 @@
     "lucide-react": "^0.294.0",
     "next": "14.0.4",
     "next-themes": "^0.2.1",
+    "openai": "^5.12.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.48.2",
@@ -61,6 +66,7 @@
     "postcss": "^8.4.32",
     "prettier": "^3.1.1",
     "prettier-plugin-tailwindcss": "^0.5.9",
+    "puppeteer": "^21.6.1",
     "tailwindcss": "^3.3.6",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.3.3"

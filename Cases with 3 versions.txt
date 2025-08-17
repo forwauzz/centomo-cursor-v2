@@ -1,0 +1,492 @@
+CASE 1
+
+Dictation – AI conversion
+
+#WHISPER TRANSCRIPT
+
+la travailleuse revoit le docteur Trane le 28 septembre 2024 il juge la condition clinique stable point il maintient les traitements physiothérapie virgule ergothérapie virgule acupuncture et les associations temporaires le travailleur de 19 octobre 2024 il juge la condition clinique stable point et maintient les traitements physiothérapie ergothérapie acupuncture le 16 novembre 2024 et juge la condition clinique détériorée et ça est-ce les traitements physiothérapie et ergothérapie il maintient les traitements en acupuncture et les aciers sont temporaires le travailleuse revoit le docteur 30 le 14 décembre 2024 et juge la condition clinique stable qui maintient les traitements d'acupuncture et associations 11 janvier 2025 et juge la condition clinique stable il prescrit des traitements en chiropratiques et des associations temporaires le 1er mars 2025 il consolide la travailleuse sur les diagnostics d'orthop cervicale en top trapèze latéral et en top stocks avec atteinte permanente à l'intégrité physique ou psychique et limitation fonctionnelle produit un rapport d'évaluation médicale auprès de la parenthèse fermée la parenthèse sur le diagnostic d'enter cervicales pour la parenthèse il consolide la travailleuse avec des limitations fonctionnelles de classe 2 de l'ursst et séquelles permanente au niveau de l'épaule gauche et l'épaule droite le travailleur obtient la radiographie la colonne cervico dorsale le 30 mai 2024 elles sont interprétées par le docteur si some my lit radiologiste ce dernier constatent comparaison aucune constatation colonne cervicale pas de discopathie préservation de la hauteur des cordes vertébraux et des espaces intersomatiques pas de fracture ou de lésions agressive colonne dorsale féminine spondylose le dorsal
+____
+# AI FORMATTED
+
+7. Historique de faits et évolution
+
+La travailleuse revoit le docteur Trane le 28 septembre 2024. Il juge la condition clinique stable. Il maintient les traitements de physiothérapie, ergothérapie, acupuncture et les assignations temporaires.
+
+La travailleuse revoit le docteur Trane le 19 octobre 2024. Il juge la condition clinique stable et maintient les traitements de physiothérapie, ergothérapie et acupuncture.
+
+Le 16 novembre 2024, le docteur Trane juge la condition clinique détériorée et cesse les traitements de physiothérapie et ergothérapie. Il maintient les traitements en acupuncture et les assignations temporaires.
+
+La travailleuse revoit le docteur Trane le 14 décembre 2024. Il juge la condition clinique stable et maintient les traitements d'acupuncture et les assignations temporaires.
+
+Le 11 janvier 2025, le docteur Trane juge la condition clinique stable. Il prescrit des traitements en chiropratique et des assignations temporaires.
+
+Le 1er mars 2025, le docteur Trane consolide la travailleuse sur les diagnostics d'entorse cervicale, entorse du trapèze latéral et entorse du dos avec atteinte permanente à l'intégrité physique ou psychique et limitation fonctionnelle. Il produit un rapport d'évaluation médicale auprès du BEM sur le diagnostic d'entorse cervicale. Il consolide la travailleuse avec des limitations fonctionnelles de classe 2 de l'URSST et des séquelles permanentes au niveau de l'épaule gauche et de l'épaule droite.
+
+La travailleuse obtient une radiographie de la colonne cervico-dorsale le 30 mai 2024. Elles sont interprétées par le docteur Si Some My Lit, radiologiste. Ce dernier constate : « Comparaison aucune constatation. Colonne cervicale : pas de discopathie, préservation de la hauteur des corps vertébraux et des espaces intersomatiques, pas de fracture ou de lésions agressives. Colonne dorsale : féminine spondylose dorsale. »
+
+_____
+MD EDITED FINAL VERSION Final product with my correction (for this one I have the first half on text message)
+
+
+La fiche de réclamation de la travailleuse décrit l'événement suivant survenu le 16 janvier 2024 :
+
+« En nettoyant le local des utilités propres, je me suis prise totalement la porte dans la tête de l'omoplate et dès lors ma collègue l'a ouverte. »
+
+Une autre fiche de réclamation décrit l’événement de la façon suivante :
+
+« Je me suis fait bousculer violemment par une porte ouverte par ma collègue pendant que je travaillais en arrière. Elle l'a ouverte sans savoir que je me trouvais là. »
+
+La travailleuse rencontre le docteur Vanessa Pinard St-Pierre, le 16 janvier 2024. Elle diagnostique une entorse cervicale secondaire à un traumatisme au travail et prescrit des anti-inflammatoires, de la physiothérapie et un arrêt de travail pour deux semaines, suivi de travaux légers.
+
+La travailleuse consulte le docteur Michel Tran, le 27 janvier 2024. Il diagnostique une entorse cervicale, entorse trapèze bilatéral et entorse du thorax. Il prescrit des radiographies cervicales et dorsales ainsi qu'une échographie des épaules. Il juge la condition clinique stable. Il prescrit de la physiothérapie et un arrêt de travail jusqu'au 24 février 2024.
+
+La travailleuse revoit le docteur Tran, le 20 février 2024. Il juge la condition clinique détériorée et prescrit de la physiothérapie et un arrêt de travail jusqu'au 10 mars 2024.
+
+La travailleuse revoit le docteur Tran, le 10 mars 2024. Il juge la condition clinique stable. Il maintient les traitements en physiothérapie, ergothérapie et l’arrêt de travail
+
+La travailleuse revoit le docteur Tran, le 31 mars 2024. Il juge la condition clinique stable et maintient les traitements en physiothérapie, ergothérapie et un arrêt de travail.
+
+La travailleuse revoit le docteur Tran, le 5 mai 2024. Il juge la condition clinique stable. Il prescrit des traitements de physiothérapie, ergothérapie, acupuncture et maintient l’arrêt de travail.
+
+La travailleuse obtient des radiographies de la colonne cervico-dorsale le 30 mai 2024. Elles sont interprétées par le docteur Thi Som Mai Le, radiologiste. Ce dernier constate : 
+
+« Comparaison 
+Aucune 
+Constatation. 
+Colonne cervicale : pas de discopathie, préservation de la hauteur des corps vertébraux et des espaces intersomatiques, pas de fracture ou de lésions agressives. 
+
+Colonne dorsale : très minime spondylose dorsale. »
+
+La travailleuse revoit le docteur Tran, le 2 juin 2024. Il juge la condition clinique stable et maintient les traitements de physiothérapie, ergothérapie, acupuncture et prescrit des assignations temporaires.
+
+La travailleuse revoit le docteur Tran, le 12 juin 2024. Il juge la condition clinique stable. Il maintient les traitements de physiothérapie, acupuncture et les assignations temporaires.
+
+La travailleuse obtient des échographies de l'épaule droite et gauche, le 17 juin 2024. Elles sont réalisées et interprétées par le docteur Khaled Iguer, radiologiste. Ce dernier constate :
+
+« Épaule droite : 
+…
+Opinion : Légère bursite sous-acromio-deltoïdienne sans conflit sous-acromial aux manœuvres dynamiques ni tendinopathie. 
+
+
+
+Épaule gauche : 
+…
+Opinion : Pas d'anomalie significative à l'échographie du jour. »
+
+La travailleuse revoit le docteur Tran, le 23 juin 2024. Il juge la condition clinique stable. Il maintient les traitements de physiothérapie, ergothérapie et les assignations temporaires.
+
+La travailleuse revoit le docteur Tran, le 1er septembre 2024. Il maintient les  diagnostics d’entorse cervicale avec entorse des trapèzes bilatéraux et prescrit une résonance magnétique cervicale. Il maintient les traitements de physiothérapie, ergothérapie, acupuncture et les assignations temporaires.
+
+La travailleuse revoit le docteur Tran, le 28 septembre 2024. Il juge la condition clinique stable. Il maintient les traitements de physiothérapie, ergothérapie, acupuncture et les assignations temporaires.
+
+La travailleuse revoit le docteur Tran, le 19 octobre 2024. Il juge la condition clinique stable et maintient les traitements de physiothérapie, ergothérapie, acupuncture et les assignations temporaires.
+
+La travailleuse revoir le docteur Tran, le 16 novembre 2024. Il juge la condition clinique détériorée et cesse les traitements de physiothérapie et ergothérapie. Il maintient les traitements en acupuncture et les assignations temporaires.
+
+La travailleuse revoit le docteur Tran, le 14 décembre 2024. Il juge la condition clinique stable et maintient les traitements d'acupuncture et les assignations temporaires.
+
+La travailleuse revoit le docteur Tran, le 11 janvier 2025. Il juge la condition clinique stable. Il prescrit des traitements en chiropratique et des assignations temporaires.
+
+Le 1er mars 2025, le docteur Tran produit un rapport final et consolide la travailleuse sur les diagnostics d'entorse cervicale, entorse du trapèze bilatéral et entorse du dos (thorax) avec atteinte permanente à l'intégrité physique ou psychique et limitations fonctionnelles.
+
+Le docteur Tran produit un rapport d'évaluation médicale (REM) le 27 mars 2025. Sur les diagnostics d'entorse cervicale, entorse trapèze bilatéral et entorse dorsale (thorax), il consolide la travailleuse avec des limitations fonctionnelles de classe 2 de l'IRSST et des séquelles permanentes au niveau du rachis cervical, rachis dorsal, de l'épaule gauche et de l'épaule droite.
+__________________________________________________________________________________________________________________________________
+
+
+Case #2
+
+#WHISPER TRANSCRIPT
+
+7. Historique de faits et évolution
+la fiche de réclamation du travailleur décrit l'événement suivant survenu le 19 avril 2024 - mon aide virgule nous étions en train de décharger un lit d'hôpital de 300 400 livres de la boîte de camion sur une terre gate j'ai vu le lit glisser vers moi il y avait euh eu de béton en arrière de moi j'ai eu peur de me faire coincer entre le mur et le lit j'ai sauté en bas de la terre de 4 pieds de haut et je me suis fait mal au dos ça va à la rencontre de docteur Sonia le 19 avril 2024 elle diagnostique un trauma dorsaux lombaire et pour droite elle ne prescrit des radiographies un scan Longo sacré et prescrit un arrêt de travail le travaille encore en compte le docteur Leclerc le 3 juin 2024 le diagnostics de construction dorceaux lombaire et épaule droite il le maintient dans le travail et prescrit de la physiothérapie je travaille à la rencontre le docteur Leclerc le 4 juillet 2024 il le diagnostic est une conclusion dorsaux lombaire il maintient les traitements en physiothérapie et l'arrêt de travail le travailleur Leclerc le 1er août 2024 et le diagnostic qu'il contient lombaire et un syndrome douloureux résiduel il prescrit de la physiothérapie au besoin et un retour au travail progressif avec tâches déjà Leclerc le 3 septembre 2024 et juge la condition clinique stable et note que le travail est attaque à conduire le camion mais ne peut manipuler de charge point incroyable incroyable 28 octobre 2024 il note un syndrome douloureux et le prescrit des blocs à cet air L4 L5 et L55 bilatérale et clinique stable.ca voilà radiographie de la colonne Lambert le 6 août 2024 elle était interprétée par le docteur Claudine Deshaies radiologiste cette dernière constate évidemment ostéopathique entérolatéral est âgé est connu virgule plus marqué en l2l3 point pencement dégénératifs modéré en L55 cette trouvaille m'apparaissent à échanger par rapport à des films récents d'avril 2024 là tu es légèrement qualifié il y a un peu plus d'arthrose à cet arbre alors ok le radiographie de l'épaule droite le 19 avril 2024 elle était interprétée par le docteur Marie-Josée berthiaule radiologiste et pour le droite microscalification à l'en-tête de l'impact pneus versus le petit rond au niveau de la tête libérale postérieure sur l'incidence latérale ceci allumé métrique je ne perçois pas de changement cellulaire et qui est hétérogénéité de la grosse liberté sur fond probablement de tantinopathie chroniques libéral est préservée pas d'attraction objectivé la communauté un petit peu dégénérative sans plus il y a un petit éperon sous la première et l'établi le tout suggérable un certain accrochage et ou une toxopathie quoi 19 avril 2019
+le travailleur revoit le docteur Leclerc virgule le 8 janvier 2025 il maintient le diagnostic de syndrome douloureux chroniques lombaire post-traumatique point et le juge la condition clinique détériorée en psychologie et prescrit des blocs facettaire il maintient le travail de chauffeur avec des manipulations de charge légère le docteur Leclerc produit une information médicale complémentaire écrite le 6 mars 2025 et note persistance de syndrome douloureux lombaire en attente de bloc facettaire lombaire et rendez-vous à physiatrie travailleurs donc consolider le travailleur revoit le docteur Leclerc le 17 mars 2025 il note une condition clinique stable il ajoute du sambalta et euh note l'arrêt complet de travail de 15 jours poste bloc face à terre il ajoute du sambalta et euh note l'arrêt complet de travail de 15 jours poste bloc face à terre il ajoute du sambalta et euh note l'arrêt complet de travail de 15 jours poste bloc face à terre
+
+____
+#AI FORMATTED
+
+La fiche de réclamation du travailleur décrit l'événement suivant survenu le 19 avril 2024 :
+
+« Mon aide et moi étions en train de décharger un lit d'hôpital de 300 à 400 livres de la boîte de camion sur une terre-plein. J'ai vu le lit glisser vers moi. Il y avait un mur de béton en arrière de moi. J'ai eu peur de me faire coincer entre le mur et le lit. J'ai sauté en bas de la terre-plein de 4 pieds de haut et je me suis fait mal au dos. »
+
+Le travailleur consulte le docteur Sonia le 19 avril 2024. Elle diagnostique un traumatisme dorso-lombaire et à l'épaule droite. Elle prescrit des radiographies, un scan lombo-sacré et un arrêt de travail.
+
+Le travailleur rencontre le docteur Leclerc le 3 juin 2024. Il maintient le diagnostic de contusion dorso-lombaire et à l'épaule droite. Il prescrit de la physiothérapie.
+
+Le travailleur revoit le docteur Leclerc le 4 juillet 2024. Il maintient le diagnostic de contusion dorso-lombaire. Il maintient les traitements en physiothérapie et l'arrêt de travail.
+
+Le travailleur revoit le docteur Leclerc le 1er août 2024. Le diagnostic est de contusion lombaire avec un syndrome douloureux résiduel. Il prescrit de la physiothérapie au besoin et un retour au travail progressif avec tâches légères.
+
+Le travailleur revoit le docteur Leclerc le 3 septembre 2024. Il juge la condition clinique stable et note que le travailleur est apte à conduire le camion mais ne peut manipuler de charges lourdes.
+
+Le 28 octobre 2024, le docteur Leclerc note un syndrome douloureux et prescrit des blocs facettaires L4-L5 et L5-S1 bilatéraux. La condition clinique est stable.
+
+Une radiographie de la colonne lombaire est réalisée le 6 août 2024. Elle est interprétée par le docteur Claudine Deshaies, radiologiste. Cette dernière constate :
+
+« Ostéophytes antérolatéraux étagés connus, plus marqués en L2-L3. Pincements dégénératifs modérés en L5-S1. Ces trouvailles m'apparaissent inchangées par rapport à des films récents d'avril 2024. L'arthrose est légèrement qualifiée. »
+
+Une radiographie de l'épaule droite est réalisée le 19 avril 2024. Elle est interprétée par le docteur Marie-Josée Berthiaume, radiologiste. Elle constate :
+
+« Microscalcification à l'insertion du supra-épineux versus le petit rond au niveau de la tête humérale postérieure sur l'incidence latérale. Ceci est asymétrique. Je ne perçois pas de changement cellulaire et il y a une hétérogénéité de la grosse tubérosité sur fond probablement de tendinopathie chronique. L'intervalle acromio-huméral est préservé. Pas d'attraction objectivée. L'acromion est un peu dégénératif sans plus. Il y a un petit éperon sous-acromial. Le tout suggère un certain accrochage et/ou une tendinopathie. »
+
+7. Historique de faits et évolution
+
+Le travailleur revoit le docteur Leclerc, le 8 janvier 2025. Il maintient le diagnostic de syndrome douloureux chronique lombaire post-traumatique et juge la condition clinique détériorée en psychologie. Il prescrit des blocs facettaires et maintient le travail de chauffeur avec des manipulations de charge légère.
+
+Le docteur Leclerc produit une information médicale complémentaire écrite le 6 mars 2025. Il note la persistance du syndrome douloureux lombaire en attente de bloc facettaire lombaire et de rendez-vous en physiatrie. Il suggère de consolider le travailleur.
+
+Le travailleur revoit le docteur Leclerc, le 17 mars 2025. Il note une condition clinique stable. Il ajoute du Cymbalta et note un arrêt complet de travail de 15 jours post-bloc facettaire.
+________________
+#MD EDITED Final version
+
+La fiche de réclamation du travailleur décrit l'événement suivant survenu le 19 avril 2024 :
+
+« Moi et mon aide, nous étions en train de décharger un lit d'hôpital de 300-400 lbs de la boite du camion sur une tail gate. J'ai vu le lit glisser vers moi et il y avait un mur de béton en arrière de moi, j'ai eu peur de me faire coincer entre le mur et le lit, j'ai sauté en bas de la tail gate de 4 pieds de haut et je me suis fait mal au dos. »
+
+Le travailleur consulte le docteur Sonia Silvano, le 19 avril 2024. Elle diagnostique un traumatisme dorso-lombaire et à l'épaule droite. Elle prescrit des radiographies, un scan lombo-sacré et un arrêt de travail.
+
+Une radiographie de l'épaule droite est réalisée le 19 avril 2024. Elle est interprétée par le docteur Marie-Josée Berthiaume, radiologiste. Elle constate :
+
+« Microscalcifications à l’enthèse du supra-épineux versus le petit rond au niveau de la tête humérale postérieure sur l'incidence latérale. Ceci est millimétrique. Je ne perçois pas de changement similaire, bien qu’il y a une hétérogénéité de la grosse tubérosité sur fond probablement de tendinopathie chronique. 
+L’alignement glénohuméral est préservé. Pas de fracture ou luxation objectivée. L'acromioclaviculaire est un petit peu dégénératif sans plus. Il y a un petit éperon sous-acromial bien établi, le tout suggérant un certain accrochage et/ou une tendinopathie de la coiffe. »
+
+Le travailleur obtient des radiographies de la colonne dorsale, colonne lombo-sacrée et bassin, le 19 avril 2024. Elles sont interprétées par le docteur Michel Dubé, radiologiste. Ce dernier constate :
+
+« Constatation :
+Au rachis dorsal, on note des changements dégénératifs multiétagés surtout au rachis moyen et inférieur avec sclérose et ostéophytose. Pas de lésion lytique focalement démontrée. Pas d’affaissement vertébral non plus. Pas de signe direct ou indirect de fracture. On ne voit pas d’anomalie significative. Il y a des changements dégénératifs légers à L1-L2, modérés à L2-L3, légers à L3-L4 et L4-L5 et légers à modérés à L5-S1. Pas d’affaissement vertébral ou de lésion lytique focale. Arthrose facettaire L4-L5 et L5-S1. Pas de fracture évidente. Calcifications vasculaires.
+
+Bassin :
+On ne voit pas d’évidence de fracture. »
+
+Le travailleur obtient un scan du rachis dorso-lombaire, le 19 avril 2024. Il est interprété par le docteure Marie-Josée Berthiaume, radiologiste. Cette dernière constate :
+
+«…
+Conclusion :
+Pas d’évidence de fracture ou luxation ou d’atteinte grossièrement neurologiques aigus.
+
+Deux petites hernies ont été mentionnées et décrites au rachis dorsal, vous y référez sans occasionner de sténose spinale centrale.
+En lombaire, discopathie de L2-L3 jusqu’à L5-S1 avec étalement à large base mais pas de franche sténose spinale centrale ou foraminale significative. Il y a quand même un petit peu plus de rétrécissement gauche dû à l’arthrose facettaire en foraminal et l’étalement discal à large base mais on perçoit quand même la racine émergente gauches de L4.
+
+Rien à signaler au sacrum ni aux sacro-iliaques jusqu’à S4-S5.
+
+L’examen a été complété jusqu’en coccygien. On démontre un peu d’arthrose sacrococcygienne sans plus.
+
+On peut mesurer cette infiltration des graisses sous-cutanées superficielle sur environ une dizaine de centimètres à gauche plus qu’à droite, depuis donc L2-L3 jusqu’à L5-S1. Il y a probablement plus inférieurement un petit hématome atteignant les graisses plus profondes mais non la musculature paraspinale, sur environ 5.8 cm en transverse X 1.6 cm d’épaisseur obliquement orienté. Encore une fois, ceci est en paraspinale dans les graisses sous-cutanées lombosacrées de L2 à S1 gauche. »
+
+Le travailleur rencontre le docteur Leclair le 3 juin 2024. Il maintient les diagnostics de contusion dorso-lombaire et à l'épaule droite. Il prescrit de la physiothérapie et un arrêt de travail.
+
+Le travailleur revoit le docteur Leclair, le 4 juillet 2024. Il maintient le diagnostic de contusion dorso-lombaire. Il maintient les traitements en physiothérapie et l'arrêt de travail.
+
+Le travailleur revoit le docteur Leclair, le 1er août 2024. Il maintient le diagnostic de contusion lombaire et ajoute un syndrome douloureux résiduel. Il prescrit de la physiothérapie au besoin et un retour au travail progressif avec tâches légères.
+
+Une radiographie de la colonne lombaire est réalisée le 6 août 2024. Elle est interprétée par le docteur Claudine Deshaies, radiologiste. Cette dernière constate :
+
+« Proéminences ostéophytiques antéro-latérales étagées connues, plus marqués en L2-L3. Pincements dégénératifs modérés en L5-S1. Ces trouvailles m'apparaissent inchangées par rapport à des films récents d'avril 2024. 
+
+L'aorte est légèrement calcifiée. Il y a un peu d’arthrose facettaire en lombaire inférieur. »
+
+Le travailleur revoit le docteur Leclair, le 3 septembre 2024. Il juge la condition clinique stable et note que le travailleur est apte à conduire un camion mais ne peut manipuler de charges lourdes.
+
+Le travailleur revoit le docteur Leclair, le 28 octobre 2024. Le docteur Leclair note un syndrome douloureux et prescrit des blocs facettaires L4-L5 et L5-S1 bilatéraux. Il juge la condition clinique est stable.
+
+Le travailleur revoit le docteur Leclair, le 8 janvier 2025. Il maintient le diagnostic de syndrome douloureux chronique lombaire post-traumatique et juge la condition clinique détériorée. Il prescrit des blocs facettaires et maintient les travaux légers de chauffeur avec des manipulations de charges légères. Il réfère le travailleur en physiatrie et psychologie.
+
+Le docteur Leclair produit une information médicale complémentaire écrite, le 6 mars 2025. Il note une persistance du syndrome douloureux lombaire et que le travailleur est en attente de bloc facettaire lombaire et d’un rendez-vous en physiatrie. Il ne consolide pas le travailleur.
+
+Le travailleur revoit le docteur Leclair, le 17 mars 2025. Il note une condition clinique stable. Il ajoute du Cymbalta et note un arrêt complet de travail de 15 jours post-bloc facettaire.
+
+
+NEW CASE 3
+
+# WHISPER TRANSCRIPT
+
+La fiche de réclamation du travailleur décrit l'événement suivant. Survenu le 7 octobre 2023, deux points. Ouvrir la parenthèse, guillemets. Je versais la chaudière d'eau. Ressenti de douleur côté gauche, bas du dos. Ensuite, j'ai poussé le chariot direction l'ascenseur. La roue devant du chariot reste prise dans la craque de l'ascenseur. Ressenti, point. Pression côté gauche au moment et quand j'ai retiré le chariot, sensation de chaud dans le bas du dos. J'ai été avertir le superviseur que j'avais de douleur. J'ai pris pilule, Advil. J'ai continué de travailler et plus les heures passaient, plus la pression côté gauche respirait. Ça me faisait mal quand j'ai respiré. Le lendemain, j'ai rentré, mais j'ai pas effectué le travail. J'ai supervisé une autre employée pour qu'elle le fasse pour moi debout ou assis. C'était difficile la journée pour moi. Fermez guillemets, fermez la parenthèse. La travailleuse consulte le docteur Harry Durusso, 9 octobre 2023. Il diagnostique un entorse lombaire. Il prescrit un arrêt de travail, des antidouleurs et des traitements en physiothérapie. La travailleuse revoit le docteur Harry Durusso, 6 novembre 2023. Il maintient le diagnostic d'entorse lombaire, l'arrêt de travail et les traitements en physiothérapie. La travailleuse revoit le docteur Harry Durusso, 19 décembre 2023. Il juge la condition clinique stable. Il maintient les traitements en physiothérapie et l'arrêt de travail. La travailleuse revoit le docteur Harry Durusso, 30 janvier 2024. Il maintient les traitements en physiothérapie et l'arrêt de travail. La travailleuse revoit le docteur Harry Durusso, 12 mars 2024. Il juge la condition clinique stable. Il maintient les traitements en physiothérapie et l'arrêt de travail. La travailleuse obtient une résonance magnétique de la colonne lombaire, le 23 mars 2024. Elle est interprétée par le docteur Roxanne Bouchard-Bellavance, radiologiste. Cette dernière constate. Ouvrez la parenthèse. Guillemets. Trois petits points. Conclusion, deux points. Changement dégénératif, tel qu'il est caractérisé, avec discopathie prédominant en L5 S1. Sténose biforaminale, modérée à sévère à gauche et minime à droite. Pas de sténose punale centrale significative. À la ligne légère déformation cuniforme de T12, d'allure non récente, à corrélé à l'historique traumatique. Point. À la ligne nodularité surrénalienne gauche et formation d'apparence cystique rénale droite. Partiellement incluse, virgule. Probablement bénigne, virgule. Mais pour lequel une tomodensitométrie avec protocole dédié et par prudence recommandée, étant donné leur inclusion partielle et l'absence d'études comparatives. Point. Fermez les guillemets. Fermez la parenthèse. Travailleuse revoit le docteur Durousseau le 16 avril 2024. Il maintient le diagnostic d'entosse lombaire et juge la condition clinique stable. Il prescrit des traitements en physiothérapie, virgule ergothérapie, et demande un développement des capacités fonctionnelles et maintient l'arrêt de travail. Il prescrit des infiltrations au niveau du rachis lombaire.
+
+____________
+# WITH IA FORMATTING
+
+7. Historique de faits et évolution
+
+La fiche de réclamation du travailleur décrit l'événement suivant survenu le 7 octobre 2023 :
+
+« Je versais la chaudière d'eau. Ressenti de douleur côté gauche, bas du dos. Ensuite, j'ai poussé le chariot direction l'ascenseur. La roue devant du chariot reste prise dans la craque de l'ascenseur. Ressenti, point. Pression côté gauche au moment et quand j'ai retiré le chariot, sensation de chaud dans le bas du dos. J'ai été avertir le superviseur que j'avais de douleur. J'ai pris pilule, Advil. J'ai continué de travailler et plus les heures passaient, plus la pression côté gauche respirait. Ça me faisait mal quand j'ai respiré. Le lendemain, j'ai rentré, mais j'ai pas effectué le travail. J'ai supervisé une autre employée pour qu'elle le fasse pour moi debout ou assis. C'était difficile la journée pour moi. »
+
+La travailleuse consulte le docteur Harry Durusso, le 9 octobre 2023. Il diagnostique une entorse lombaire. Il prescrit un arrêt de travail, des antidouleurs et des traitements en physiothérapie.
+
+La travailleuse revoit le docteur Harry Durusso, le 6 novembre 2023. Il maintient le diagnostic d'entorse lombaire, l'arrêt de travail et les traitements en physiothérapie.
+
+La travailleuse revoit le docteur Harry Durusso, le 19 décembre 2023. Il juge la condition clinique stable. Il maintient les traitements en physiothérapie et l'arrêt de travail.
+
+La travailleuse revoit le docteur Harry Durusso, le 30 janvier 2024. Il maintient les traitements en physiothérapie et l'arrêt de travail.
+
+La travailleuse revoit le docteur Harry Durusso, le 12 mars 2024. Il juge la condition clinique stable. Il maintient les traitements en physiothérapie et l'arrêt de travail.
+
+La travailleuse obtient une résonance magnétique de la colonne lombaire, le 23 mars 2024. Elle est interprétée par le docteur Roxanne Bouchard-Bellavance, radiologiste. Cette dernière constate :
+
+« ... Conclusion : Changement dégénératif, tel qu'il est caractérisé, avec discopathie prédominant en L5 S1. Sténose biforaminale, modérée à sévère à gauche et minime à droite. Pas de sténose punale centrale significative. À la ligne légère déformation cuniforme de T12, d'allure non récente, à corrélé à l'historique traumatique. Nodularité surrénalienne gauche et formation d'apparence cystique rénale droite. Partiellement incluse, probablement bénigne, mais pour lequel une tomodensitométrie avec protocole dédié et par prudence recommandée, étant donné leur inclusion partielle et l'absence d'études comparatives. »
+
+La travailleuse revoit le docteur Durousseau, le 16 avril 2024. Il maintient le diagnostic d'entorse lombaire et juge la condition clinique stable. Il prescrit des traitements en physiothérapie, ergothérapie, et demande un développement des capacités fonctionnelles et maintient l'arrêt de travail. Il prescrit des infiltrations au niveau du rachis lombaire.
+
+___________
+#MD FORMATTED FINAL version
+La fiche de réclamation de la travailleuse décrit l'événement suivant survenu le 7 octobre 2023 :
+
+« Je versais la chaudière eau resenti douleur côté gauche bas du dos. en suite j'ai pouse le chariot direrection ascenseur la roue devant du chariot reste prit dans la crack de l'ascenseur ressenti. Pression côté gauche au moment et quand j'ai retirer le chariot, sensation de chaud dans le bas du dos j'ai été avertir le superviseur que j'avais douleur j'ai pris pullule adevil j'ai continuer de travaillée et plus les heure pasais plus la pression côté gauche respirais ça me fesais mal quand j respirai le lendemain j'ai rentrer mais j'ai pas effectuer le travaille j'ai superviser une autre employée pour quel le fasse pour moi debout ou assis s'était difficile la journée pour moi. »
+
+La travailleuse consulte le docteur Harry Duroseau, le 9 octobre 2023. Il diagnostique une entorse lombaire. Il prescrit un arrêt de travail, des antidouleurs et des traitements en physiothérapie.
+
+La travailleuse revoit le docteur Harry Duroseau, le 6 novembre 2023. Il maintient le diagnostic d'entorse lombaire, l'arrêt de travail et les traitements en physiothérapie.
+
+La travailleuse revoit le docteur Harry Duroseau, le 19 décembre 2023. Il juge la condition clinique stable. Il maintient les traitements en physiothérapie et l'arrêt de travail.
+
+La travailleuse revoit le docteur Harry Duroseau, le 30 janvier 2024. Il maintient les traitements en physiothérapie et l'arrêt de travail.
+
+La travailleuse revoit le docteur Harry Duroseau, le 12 mars 2024. Il juge la condition clinique stable. Il maintient les traitements en physiothérapie et l'arrêt de travail.
+
+La travailleuse obtient une résonance magnétique de la colonne lombaire, le 23 mars 2024. Elle est interprétée par le docteur Roxanne Bouchard-Bellavance, radiologiste. Cette dernière constate :
+
+« ... 
+Conclusion : 
+Changement dégénératif, tels que caractérisés, avec discopathie prédominant en L5-S1. Sténoses bi-foraminales, modérée à sévère à gauche et minime à droite. Pas de sténose spinale centrale significative. 
+
+Légère déformation cunéiforme de T12, d'allure non récente, à corrélé à l'historique traumatique. 
+
+Nodularité surrénalienne gauche et formation d'apparence kystique rénale droite partiellement incluses, probablement bénignes, mais pour lesquelles une tomodensitométrie avec protocole dédié est par prudence recommandé étant donné leur inclusion partielle et l'absence d'étude comparative. »
+
+La travailleuse revoit le docteur Duroseau, le 16 avril 2024. Il maintient le diagnostic d'entorse lombaire et juge la condition clinique stable. Il prescrit des traitements en physiothérapie, ergothérapie et demande une évaluation et développement des capacités fonctionnelles. Il maintient l'arrêt de travail. Il prescrit des infiltrations au niveau du rachis lombaire.
+
+________________________________________________________________________________________________________________________________
+CASE 4
+
+#WHISPER TRANSCRIPT
+
+La travailleuse est une créatrice de contenu sur Internet et pour des chaînes de télévision sportive. Ses tâches sont très variées. Elle consiste à faire du montage vidéo, à être devant et derrière la caméra, faire des entrevues avec des personnes différentes, participer à des réunions pour préparer des émissions, effectuer des recherches pour préparer des émissions, des publications, et travailler dans des endroits différents selon les contenus à réaliser. Elle a été victime d'un accident de travail, le 8 février 2024. La fiche de réclamation de la travailleuse décrit l'événement de la façon suivante. J'ai immédiatement ressenti des symptômes. La travailleuse consulte le docteur Julie Perreault, le 13 février 2024. Elle diagnostique un trauma crânio-cérébral léger et une entorse cervicale. Elle prescrit de la physiothérapie, des anti-inflammatoires et un scan cérébral. La travailleuse rencontre le docteur Robin Rebecca Coombs, le 13 février 2024. Elle diagnostique un TCC et une entorse cervicale. Elle rapporte des troubles visuels et réfère la travailleuse en optométrie. Elle prescrit de la physiothérapie et juge la condition inestable. La travailleuse revoit le docteur Coombs, le 27 février 2024. Elle ajoute des diagnostics d'entorse à la hanche droite et au genou gauche. Elle prescrit de la physiothérapie et de l'ergothérapie et maintient l'arrêt de travail. Elle juge la condition clinique amélioréee. La travailleuse revoit le docteur Coombs, le 12 mars 2024. Elle juge la condition clinique amélioréee. Elle maintient les traitements en physiothérapie et ergothérapie et prescrit des assignations temporaires. La travailleuse revoit le docteur Coombs, le 26 mars 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et les assignations temporaires. La travailleuse revoit le docteur Coombs, le 25 avril 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et les assignations temporaires. La travailleuse obtient un scan cérébral le 16 février 2024. Elle est interprétée par le docteur Michael Pastor, virgule radiologiste. Ce dernier constate deux points. Ouvrez la parenthèse, guillemets, trois petits points, opinion, deux points, examen normal, points. Fermez les guillemets, fermez la parenthèse. La travailleuse revoit le docteur Coombs, le 28 mai 2024. Elle juge la condition clinique amélioréee. Elle maintient les traitements en physiothérapie, ergothérapie et les assignations temporaires. La travailleuse revoit le docteur Coombs, le 28 juin 2024. Elle juge la condition clinique amélioréee. Elle maintient les traitements en physiothérapie, ergothérapie et prescrit un retour au travail régulier. La travailleuse revoit le docteur Coombs, le 26 juillet 2024. Elle juge la condition clinique amélioréee. Elle maintient les traitements en physiothérapie, ergothérapie et le travail régulier. La travailleuse revoit le docteur Coombs, le 30 août 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et ajoute que la travailleuse peut prendre des pauses au besoin lors de son travail. La travailleuse revoit le docteur Coombs, le 27 septembre 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et le travail régulier, nécessitant des pauses au besoin. La travailleuse revoit le docteur Coombs, le 25 octobre 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et le travail régulier, nécessitant des pauses au besoin. La travailleuse revoit le docteur Coombs, le 13 décembre 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et demande une consultation en audiologie et en ORL pour ses symptômes au niveau de la sphère ORL. La travailleuse revoit le docteur Coombs, le 7 février 2025. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et le travail régulier, avec pauses au besoin. La travailleuse revoit le docteur Coombs, le 28 mars 2025. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et le travail régulier, avec pauses au besoin. Elle précrit une échographie de la hanche droite. La travailleuse revoit le docteur Coombs, le 24 avril 2025. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie et le travail régulier, avec pauses au besoin.
+
+AI FORMATTED 
+
+7. Historique de faits et évolution
+
+La travailleuse est une créatrice de contenu sur Internet et pour des chaînes de télévision sportive. Ses tâches sont variées, incluant le montage vidéo, la participation devant et derrière la caméra, la réalisation d'entrevues, la participation à des réunions pour préparer des émissions, la recherche pour des publications, et le travail dans divers endroits selon les contenus à réaliser. 
+
+La fiche de réclamation de la travailleuse décrit l'événement suivant survenu le 8 février 2024 : « J'ai immédiatement ressenti des symptômes. »
+
+La travailleuse consulte le docteur Julie Perreault, le 13 février 2024. Elle diagnostique un trauma crânio-cérébral léger et une entorse cervicale. Elle prescrit de la physiothérapie, des anti-inflammatoires et un scan cérébral.
+
+La travailleuse rencontre le docteur Robin Rebecca Coombs, le 13 février 2024. Elle diagnostique un TCC et une entorse cervicale, rapporte des troubles visuels et réfère la travailleuse en optométrie. Elle prescrit de la physiothérapie et juge la condition inestable.
+
+La travailleuse revoit le docteur Coombs, le 27 février 2024. Elle ajoute des diagnostics d'entorse à la hanche droite et au genou gauche. Elle prescrit de la physiothérapie et de l'ergothérapie et maintient l'arrêt de travail. Elle juge la condition clinique améliorée.
+
+La travailleuse revoit le docteur Coombs, le 12 mars 2024. Elle juge la condition clinique améliorée. Elle maintient les traitements en physiothérapie et ergothérapie et prescrit des assignations temporaires.
+
+La travailleuse revoit le docteur Coombs, le 26 mars 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et les assignations temporaires.
+
+La travailleuse revoit le docteur Coombs, le 25 avril 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et les assignations temporaires.
+
+La travailleuse obtient un scan cérébral le 16 février 2024. Il est interprété par le docteur Michael Pastor, radiologiste. Ce dernier constate : « Examen normal. »
+
+La travailleuse revoit le docteur Coombs, le 28 mai 2024. Elle juge la condition clinique améliorée. Elle maintient les traitements en physiothérapie, ergothérapie et les assignations temporaires.
+
+La travailleuse revoit le docteur Coombs, le 28 juin 2024. Elle juge la condition clinique améliorée. Elle maintient les traitements en physiothérapie, ergothérapie et prescrit un retour au travail régulier.
+
+La travailleuse revoit le docteur Coombs, le 26 juillet 2024. Elle juge la condition clinique améliorée. Elle maintient les traitements en physiothérapie, ergothérapie et le travail régulier.
+
+La travailleuse revoit le docteur Coombs, le 30 août 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et ajoute que la travailleuse peut prendre des pauses au besoin lors de son travail.
+
+La travailleuse revoit le docteur Coombs, le 27 septembre 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et le travail régulier, nécessitant des pauses au besoin.
+
+La travailleuse revoit le docteur Coombs, le 25 octobre 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et le travail régulier, nécessitant des pauses au besoin.
+
+La travailleuse revoit le docteur Coombs, le 13 décembre 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et demande une consultation en audiologie et en ORL pour ses symptômes au niveau de la sphère ORL.
+
+La travailleuse revoit le docteur Coombs, le 7 février 2025. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et le travail régulier, avec pauses au besoin.
+
+La travailleuse revoit le docteur Coombs, le 28 mars 2025. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et le travail régulier, avec pauses au besoin. Elle prescrit une échographie de la hanche droite.
+
+La travailleuse revoit le docteur Coombs, le 24 avril 2025. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie et le travail régulier, avec pauses au besoin.
+_____________
+
+#MD FORMATED FINAL VERSION (this one was very good!)
+
+La travailleuse est une créatrice de contenu sur Internet et pour des chaînes de télévision sportive. Ses tâches sont variées, incluant le montage vidéo, la participation devant et derrière la caméra, la réalisation d'entrevues, la participation à des réunions pour préparer des émissions, la recherche pour des publications et le travail dans divers endroits selon les contenus à réaliser. 
+
+La fiche de réclamation de la travailleuse décrit l'événement suivant survenu le 8 février 2024 : 
+
+« Lors d’un tournage au casino de Montréal, un décor en bois massif est tombé sur ma tête. J'ai immédiatement ressenti des symptômes. »
+
+La travailleuse consulte le docteur Julie Perreault, le 13 février 2024. Elle diagnostique un trauma crânio-cérébral léger (TCCL) et une entorse cervicale. Elle prescrit de la physiothérapie, des anti-inflammatoires et un scan cérébral.
+
+La travailleuse rencontre le docteur Robin Rebecca Coombs, le 13 février 2024. Elle diagnostique un TCCL et une entorse cervicale, rapporte des troubles visuels et réfère la travailleuse en optométrie. Elle prescrit de la physiothérapie et juge la condition clinique stable.
+
+La travailleuse obtient un scan cérébral le 16 février 2024. Il est interprété par le docteur Michaël Pastor, radiologiste. Ce dernier constate : 
+« …
+Opinion : 
+Examen normal. »
+
+La travailleuse revoit le docteur Coombs, le 27 février 2024. Elle ajoute des diagnostics d'entorse à la hanche droite et au genou gauche. Elle prescrit de la physiothérapie, de l'ergothérapie et maintient l'arrêt de travail. Elle juge la condition clinique améliorée.
+
+La travailleuse revoit le docteur Coombs, le 12 mars 2024. Elle juge la condition clinique améliorée. Elle maintient les traitements en physiothérapie, ergothérapie et prescrit des assignations temporaires.
+
+La travailleuse revoit le docteur Coombs, le 26 mars 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et les assignations temporaires.
+
+La travailleuse revoit le docteur Coombs, le 25 avril 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et les assignations temporaires.
+
+La travailleuse revoit le docteur Coombs, le 28 mai 2024. Elle juge la condition clinique améliorée. Elle maintient les traitements en physiothérapie, ergothérapie et les assignations temporaires.
+
+La travailleuse revoit le docteur Coombs, le 28 juin 2024. Elle juge la condition clinique améliorée. Elle maintient les traitements en physiothérapie, ergothérapie et prescrit un retour au travail régulier.
+
+La travailleuse revoit le docteur Coombs, le 26 juillet 2024. Elle juge la condition clinique améliorée. Elle maintient les traitements en physiothérapie, ergothérapie et le travail régulier.
+
+La travailleuse revoit le docteur Coombs, le 30 août 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et ajoute que la travailleuse peut prendre des pauses au besoin lors de son travail.
+
+La travailleuse revoit le docteur Coombs, le 27 septembre 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et le travail régulier nécessitant des pauses au besoin.
+
+La travailleuse revoit le docteur Coombs, le 25 octobre 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et le travail régulier nécessitant des pauses au besoin.
+
+La travailleuse revoit le docteur Coombs, le 13 décembre 2024. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et demande une consultation en audiologie et en ORL pour ses symptômes au niveau de la sphère ORL.
+
+La travailleuse revoit le docteur Coombs, le 7 février 2025. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et le travail régulier avec pauses au besoin.
+
+La travailleuse revoit le docteur Coombs, le 28 mars 2025. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie, ergothérapie et le travail régulier avec pauses au besoin. Elle prescrit une échographie de la hanche droite.
+
+La travailleuse revoit le docteur Coombs, le 24 avril 2025. Elle juge la condition clinique stable. Elle maintient les traitements en physiothérapie et le travail régulier avec pauses au besoin.
+
+
+__________________________________________________________________
+New case CASE 5 2025-08-03
+#WHISPER TRANSCRIPT
+La fiche de réclamation du travailleur décrit l'événement suivant survenu le 27 novembre 2023. Deux points, ouvrez les guillemets. Je vissais au mur en étant dans un escabeau et j'ai perdu pied. J'ai chuté de l'escabeau et mon poignet a été coupé sur une liste de métal qui se trouvait au sol. Fermez les guillemets. Le travailleur consulte le docteur Julie Côté-Leclerc le 27 novembre 2023. Elle diagnostique une plaie complexe au poignet gauche. Elle réalise des sutures, administre le vaccin du tétanos et prescrit un arrêt de travail de deux semaines. Le travailleur rencontre le docteur Chloé Labelle le 8 décembre 2023. Elle diagnostique une plaie complexe du poignet gauche. Elle procède au retrait des sutures. Elle note une cellulite à l'avant-bras gauche et prescrit des antibiotiques pour une durée de cinq jours. Le travailleur revoit le docteur Labelle le 15 décembre 2023. Elle prescrit une radiographie et une échographie de l'avant-bras et réfère le travailleur en chirurgie plastique. Elle juge la condition clinique stable. Elle maintient l'arrêt de travail. Le travailleur rencontre le docteur Élie Boghossian, chirurgien plastique, le 1er février 2024. Elle diagnostique une lacération au poignet gauche. Elle prescrit de l'ergothérapie et des travaux légers. Elle juge la condition clinique stable. Le travailleur revoit le docteur Labelle le 23 février 2024. Elle diagnostique une lacération au poignet gauche palmaire avec hypersensibilité au niveau de la cicatrice. Elle note que le travailleur est en attente d'une échographie de surface. Elle maintient les traitements en ergothérapie et les assignations temporaires. Le travailleur revoit le docteur Labelle le 28 mars 2024. Elle note les résultats de l'échographie. Elle juge la condition clinique amélioréee. Elle prescrit des traitements en ergothérapie, kinésithérapie et maintient les assignations temporaires. Le travailleur revoit le docteur Boghossian le 4 avril 2024. Il note une lacération au poignet gauche avec une atteinte partielle des fléchisseurs du FCU. Il prescrit des traitements en ergothérapie. Et un arrêt de travail. Il juge la condition clinique amélioréee. Il ne compte pas revoir le travailleur. Le travailleur obtient une échographie du poignet gauche le 14 mars 2024. Elle est réalisée et interprétée par le docteur Amin Amachine, radiologiste. Ce dernier constate ouvrir la parenthèse, ouvrir les guillemets, patient ayant eu une lacération importante au versant palmeur du poignet gauche à la fin du novembre 2023, patient ayant eu une réparation de ceci à ce moment, point paragraphe d'exploration échographique, qui retrouve des remaniements cicatriciels de la peau et des tissus sous-cutanés en lien avec des antécédents de lacérations sans collection, point. Patient qui présente des tendons palmaris longus des deux côtés, point. Du côté gauche, le tendon apparaît fortement hétérogène, virgule hypo-écogène, virgule épaissie avec des zones anécogènes, en son sein témoignant de stigmates de déchireux, point. Ceci occupe par endroits jusqu'à 50% de l'épaisseur du tendon et s'étend sur quasiment son entièreté dans son diamètre transverse, point. Le tendon apparaît très hétérogène dans la portion digitale, point paragraphe. le travailleur présente une cicatrice qui s'étend jusqu'au niveau du versant ulnaire du poignet. Il présente une douleur à ce niveau, point. L'exploration échographique à cet endroit révèle un aspect fortement hétérogène, hyper-écogène, hypo-écogène, déformé de la portion tout à fait digitale du fléchisseur ulnaire du carpe, virgule, sur ses 13 derniers millimètres, virgule, jusqu'à son insertion sur le pisciforme, point. Celui-ci présente des déchireux multifocales à ce niveau, virgule, apparaissant par endroits de haut grade et impliquant la quasi-totalité de l'épaisseur du tendon par endroits, virgule. Ceci s'étendant sur au moins 8 millimètres dans son grand axe, point. Il n'y a pas de déchireux d'apparence complète ou de rétraction tendineuse, point paragraphe. Trois petits points à la ligne conclusion, deux points. Cicatrice atteignant la peau et les tissus mous sous-cutanés en lien avec la lacération complexe, point. Il y a une atteinte tendineuse associée du palmaris longus et du fléchisseur ulnaire du carpe avec des déchireux aussi tels que détaillés ici au point paragraphe. Réévaluation en plastique recommandée, point. Fermez les guillemets, fermez la parenthèse.
+Le travailleur revoit le docteur Labelle le 25 avril 2024. Elle juge la condition clinique amélioréee. Elle maintient les traitements en ergothérapie. Elle prescrit un scan du poignet gauche sur une suspicion de subluxation. Elle maintient l'arrêt de travail. Le travailleur revoit le docteur Labelle le 10 juin 2024. Elle juge la condition clinique amélioréee. Elle maintient les traitements en ergothérapie, virgule kinésithérapie et l'arrêt de travail. Le travailleur revoit le docteur Labelle le 29 juillet 2024. Elle juge la condition clinique amélioréee. Elle note que le travailleur est en attente du scan du poignet gauche. Elle maintient les traitements en ergothérapie, virgule kinésithérapie et l'arrêt de travail. Le travailleur rencontre le docteur Geneviève Arsenault le 18 octobre 2024. Elle juge la condition clinique amélioréee. Elle maintient les traitements en ergothérapie. Elle note qu'on recommande une évaluation des capacités fonctionnelles afin de débuter un programme de développement des capacités fonctionnelles. Le travailleur obtient un scan du poignet gauche le 7 décembre 2024. Il est interprété par le docteur Pierre-Luc Côté. Le travailleur obtient un scan du poignet gauche le 7 décembre 2024. Il est interprété par le docteur Pierre-Luc Côté. Ce dernier constate, ouvrir la parenthèse, ouvrir les guillemets, les tendons, les tissus mous sont peu et mal évalués par Thaumodensitométrie dans un contexte de lacération traumatique, absence de lésion osseuse ou articulaire, pas de calcification dans les tissus mous, alignement du carpe normal, remodelage des tissus mous en palmar, présumer en lien avec la plaie initiale, l'intégrité tendineuse ne peut être évaluée, pas de lésion osseuse ou articulaire démontrée, voir les commentaires pour les tissus mous. Fermez les guillemets, fermez la parenthèse. Le travailleur revoit le docteur Arsenault le 30 janvier 2025. Elle juge la condition clinique stable, point. Elle prescrit le programme de développement des capacités fonctionnelles qui devrait débuter le 12 février 2025, point. Le travailleur obtient une évaluation des capacités fonctionnelles, où l'on recommande un programme de développement des capacités fonctionnelles, point. Le docteur Arsenault prescrit une orthèse circonférentielle d'immobilisation au poignet gauche. Le 1er mai 2025, le docteur Arsenault produit un rapport final, point. Sur le diagnostic de lacération complexe du poignet gauche, elle consolide le travailleur avec atteinte permanente à l'intégrité physique ou psychique et limitations fonctionnelles, point. Elle ne produira pas le rapport d'évaluation médicale, point. Nous avons à notre disposition le rapport d'évaluation finale des capacités fonctionnelles du travailleur. Le rapport conclut que le travailleur n'a pas atteint les objectifs pour un mois, point. Le rapport conclut que le travailleur n'a pas atteint les objectifs pour un mois, point. Le rapport conclut que le travailleur n'a pas atteint les objectifs pour un mois, point.
+
+#Format with AI
+
+7. Historique de faits et évolution
+
+La fiche de réclamation du travailleur décrit l'événement suivant survenu le 27 novembre 2023 : « Je vissais au mur en étant dans un escabeau et j'ai perdu pied. J'ai chuté de l'escabeau et mon poignet a été coupé sur une liste de métal qui se trouvait au sol. »
+
+Le travailleur consulte le docteur Julie Côté-Leclerc, le 27 novembre 2023. Elle diagnostique une plaie complexe au poignet gauche. Elle réalise des sutures, administre le vaccin du tétanos et prescrit un arrêt de travail de deux semaines.
+
+Le travailleur rencontre le docteur Chloé Labelle, le 8 décembre 2023. Elle diagnostique une plaie complexe du poignet gauche. Elle procède au retrait des sutures. Elle note une cellulite à l'avant-bras gauche et prescrit des antibiotiques pour une durée de cinq jours.
+
+Le travailleur revoit le docteur Labelle, le 15 décembre 2023. Elle prescrit une radiographie et une échographie de l'avant-bras et réfère le travailleur en chirurgie plastique. Elle juge la condition clinique stable et maintient l'arrêt de travail.
+
+Le travailleur rencontre le docteur Élie Boghossian, chirurgien plastique, le 1er février 2024. Il diagnostique une lacération au poignet gauche. Il prescrit de l'ergothérapie et des travaux légers. Il juge la condition clinique stable.
+
+Le travailleur revoit le docteur Labelle, le 23 février 2024. Elle diagnostique une lacération au poignet gauche palmaire avec hypersensibilité au niveau de la cicatrice. Elle note que le travailleur est en attente d'une échographie de surface. Elle maintient les traitements en ergothérapie et les assignations temporaires.
+
+Le travailleur revoit le docteur Labelle, le 28 mars 2024. Elle note les résultats de l'échographie et juge la condition clinique améliorée. Elle prescrit des traitements en ergothérapie, kinésithérapie et maintient les assignations temporaires.
+
+Le travailleur revoit le docteur Boghossian, le 4 avril 2024. Il note une lacération au poignet gauche avec une atteinte partielle des fléchisseurs du FCU. Il prescrit des traitements en ergothérapie et un arrêt de travail. Il juge la condition clinique améliorée et ne compte pas revoir le travailleur.
+
+Le travailleur obtient une échographie du poignet gauche, le 14 mars 2024. Elle est réalisée et interprétée par le docteur Amin Amachine, radiologiste. Ce dernier constate : « Patient ayant eu une lacération importante au versant palmaire du poignet gauche à la fin du novembre 2023, patient ayant eu une réparation de ceci à ce moment. Exploration échographique qui retrouve des remaniements cicatriciels de la peau et des tissus sous-cutanés en lien avec des antécédents de lacérations sans collection. Patient qui présente des tendons palmaris longus des deux côtés. Du côté gauche, le tendon apparaît fortement hétérogène, hypo-écogène, épaissi avec des zones anécogènes en son sein témoignant de stigmates de déchireux. Ceci occupe par endroits jusqu'à 50% de l'épaisseur du tendon et s'étend sur quasiment son entièreté dans son diamètre transverse. Le tendon apparaît très hétérogène dans la portion digitale. Le travailleur présente une cicatrice qui s'étend jusqu'au niveau du versant ulnaire du poignet. Il présente une douleur à ce niveau. L'exploration échographique à cet endroit révèle un aspect fortement hétérogène, hyper-écogène, hypo-écogène, déformé de la portion tout à fait digitale du fléchisseur ulnaire du carpe, sur ses 13 derniers millimètres, jusqu'à son insertion sur le pisciforme. Celui-ci présente des déchireux multifocales à ce niveau, apparaissant par endroits de haut grade et impliquant la quasi-totalité de l'épaisseur du tendon par endroits. Ceci s'étendant sur au moins 8 millimètres dans son grand axe. Il n'y a pas de déchireux d'apparence complète ou de rétraction tendineuse. Conclusion : Cicatrice atteignant la peau et les tissus mous sous-cutanés en lien avec la lacération complexe. Il y a une atteinte tendineuse associée du palmaris longus et du fléchisseur ulnaire du carpe avec des déchireux aussi tels que détaillés ici. Réévaluation en plastique recommandée. »
+
+
+Le travailleur revoit le docteur Labelle, le 25 avril 2024. Elle juge la condition clinique améliorée. Elle maintient les traitements en ergothérapie et prescrit un scan du poignet gauche sur une suspicion de subluxation. Elle maintient l'arrêt de travail.
+
+Le travailleur revoit le docteur Labelle, le 10 juin 2024. Elle constate une amélioration continue de la condition clinique. Elle maintient les traitements en ergothérapie et kinésithérapie, ainsi que l'arrêt de travail.
+
+Le travailleur revoit le docteur Labelle, le 29 juillet 2024. Elle note que la condition clinique est toujours améliorée et que le travailleur est en attente du scan du poignet gauche. Elle maintient les traitements en ergothérapie, kinésithérapie et l'arrêt de travail.
+
+Le travailleur rencontre le docteur Geneviève Arsenault, le 18 octobre 2024. Elle juge la condition clinique améliorée et maintient les traitements en ergothérapie. Elle recommande une évaluation des capacités fonctionnelles afin de débuter un programme de développement des capacités fonctionnelles.
+
+Le travailleur obtient un scan du poignet gauche, le 7 décembre 2024. Il est interprété par le docteur Pierre-Luc Côté. Ce dernier constate : « Les tendons, les tissus mous sont peu et mal évalués par Thaumodensitométrie dans un contexte de lacération traumatique, absence de lésion osseuse ou articulaire, pas de calcification dans les tissus mous, alignement du carpe normal, remodelage des tissus mous en palmar, présumer en lien avec la plaie initiale, l'intégrité tendineuse ne peut être évaluée, pas de lésion osseuse ou articulaire démontrée. »
+
+Le travailleur revoit le docteur Arsenault, le 30 janvier 2025. Elle juge la condition clinique stable. Elle prescrit le programme de développement des capacités fonctionnelles qui devrait débuter le 12 février 2025. Le travailleur obtient une évaluation des capacités fonctionnelles, où l'on recommande un programme de développement des capacités fonctionnelles. Le docteur Arsenault prescrit une orthèse circonférentielle d'immobilisation au poignet gauche.
+
+Le docteur Arsenault produit un rapport final, le 1er mai 2025. Sur le diagnostic de lacération complexe du poignet gauche, elle consolide le travailleur avec atteinte permanente à l'intégrité physique ou psychique et limitations fonctionnelles. Elle ne produira pas le rapport d'évaluation médicale. Nous avons à notre disposition le rapport d'évaluation finale des capacités fonctionnelles du travailleur. Le rapport conclut que le travailleur n'a pas atteint les objectifs pour un mois.
+
+# MD FINAL VERSION CORRECTED
+
+La fiche de réclamation du travailleur décrit l'événement suivant survenu le 27 novembre 2023 : « Je vissais au mur en étant dans un escabeau et j'ai perdu pied. J'ai chuté de l'escabeau et mon poignet a été coupé sur une lisse de métal qui se trouvait au sol. »
+
+Le travailleur consulte le docteur Julie Côté-Leclerc, le 27 novembre 2023. Elle diagnostique une plaie complexe au poignet gauche. Elle réalise des sutures, administre le vaccin du tétanos et prescrit un arrêt de travail de deux semaines.
+
+Le travailleur rencontre le docteur Chloé Labelle, le 8 décembre 2023. Elle diagnostique une plaie complexe du poignet gauche. Elle procède au retrait des sutures. Elle note une cellulite à l'avant-bras gauche et prescrit des antibiotiques pour une durée de cinq jours.
+
+Le travailleur revoit le docteur Labelle, le 15 décembre 2023. Elle prescrit une radiographie et une échographie de l'avant-bras et réfère le travailleur en chirurgie plastique. Elle juge la condition clinique stable et maintient l'arrêt de travail.
+
+Le travailleur rencontre le docteur Élie Boghossian, chirurgien plasticien, le 1er février 2024. Il diagnostique une lacération au poignet gauche. Il prescrit de l'ergothérapie et des travaux légers. Il juge la condition clinique stable.
+
+Le travailleur revoit le docteur Labelle, le 23 février 2024. Elle diagnostique une lacération au poignet gauche palmaire avec hypersensibilité au niveau de la cicatrice. Elle note que le travailleur est en attente d'une échographie de surface. Elle maintient les traitements en ergothérapie et les assignations temporaires.
+
+Le travailleur obtient une échographie du poignet gauche, le 14 mars 2024. Elle est réalisée et interprétée par le docteur Amin Hammachin, radiologiste. Ce dernier constate : 
+
+« Patient ayant eu une lacération importante au versant palmaire du poignet gauche à la fin du novembre 2023, patient ayant eu une réparation de ceci à ce moment. 
+
+L’exploration échographique qui retrouve des remaniements cicatriciels de la peau et des tissus sous-cutanés en lien avec des antécédents de lacérations sans collection. 
+
+Patient qui présente des tendons palmaris longus des deux côtés. Du côté gauche, le tendon apparaît fortement hétérogène, hypoéchogène, épaissi avec des zones anéchogènes en son sein témoignant de stigmates de déchirure. Ceci occupe par endroits jusqu'à 50% de l'épaisseur du tendon et s'étend sur quasiment son entièreté dans son diamètre transverse. Le tendon apparaît très hétérogène dans la portion digitale. 
+
+Le patient présente une cicatrice qui s'étend jusqu'au niveau du versant ulnaire du poignet et il présente une douleur à ce niveau. L'exploration échographique à cet endroit révèle un aspect fortement hétérogène, hypoéchogène, déformé de la portion tout à fait digitale du fléchisseur ulnaire du carpe, sur ses 13 derniers millimètres, jusqu'à son insertion sur le pisiforme. Celui-ci présente des déchirures multifocales à ce niveau, apparaissant par endroits de haut grade et impliquant la quasi-totalité de l'épaisseur du tendon par endroits, ceci s'étendant sur au moins 8 millimètres dans son grand axe. Il n'y a pas de déchirure d'apparence complète ou de rétraction tendineuse. 
+
+…
+
+Conclusion : 
+1.Cicatrice atteignant la peau et les tissus mous sous-cutanés en lien avec la lacération complexe. Il y a une atteinte tendineuse associée du palmaris longus et du fléchisseur ulnaire du carpe avec des déchirures aussi tels que détaillés ici. 
+
+2.Réévaluation en plastique recommandée. »
+
+Le travailleur revoit le docteur Labelle, le 28 mars 2024. Elle note les résultats de l'échographie et juge la condition clinique améliorée. Elle prescrit des traitements en ergothérapie, kinésithérapie et maintient les assignations temporaires.
+
+Le travailleur revoit le docteur Boghossian, le 4 avril 2024. Il note une lacération au poignet gauche avec une atteinte partielle des fléchisseurs du FCU. Il prescrit des traitements en ergothérapie et un arrêt de travail. Il juge la condition clinique améliorée et ne compte pas revoir le travailleur.
+
+Le travailleur revoit le docteur Labelle, le 25 avril 2024. Elle juge la condition clinique améliorée. Elle maintient les traitements en ergothérapie et prescrit un scan du poignet gauche sur une suspicion de subluxation. Elle maintient l'arrêt de travail.
+
+Le travailleur revoit le docteur Labelle, le 10 juin 2024. Elle constate une amélioration continue de la condition clinique. Elle maintient les traitements en ergothérapie et kinésithérapie, ainsi que l'arrêt de travail.
+
+Le travailleur revoit le docteur Labelle, le 29 juillet 2024. Elle note que la condition clinique est toujours améliorée et que le travailleur est en attente du scan du poignet gauche. Elle maintient les traitements en ergothérapie, kinésithérapie et l'arrêt de travail.
+
+Le travailleur rencontre le docteur Geneviève Arsenault, le 18 octobre 2024. Elle juge la condition clinique améliorée et maintient les traitements en ergothérapie. Elle recommande une évaluation des capacités fonctionnelles afin de débuter un programme de développement des capacités fonctionnelles.
+
+Le travailleur obtient un scan du poignet gauche, le 7 décembre 2024. Il est interprété par le docteur Pierre-Luc Côté, radiolgiste. Ce dernier constate : 
+
+« Les tendons, les tissus mous sont peu et mal évalués par tomodensitométrie dans un contexte de lacération traumatique.
+
+Absence de lésion osseuse ou articulaire.
+Pas de calcification dans les tissus mous.
+Alignement du carpe normal. 
+Remodelage des tissus mous en palmaire présumer en lien avec la plaie initial. L'intégrité tendineuse ne peut être évaluée.
+
+Impression : 
+
+Pas de lésion osseuse ou articulaire démontrée. »
+
+Le travailleur revoit le docteur Arsenault, le 30 janvier 2025. Elle juge la condition clinique stable. Elle prescrit le programme de développement des capacités fonctionnelles qui devrait débuter le 12 février 2025. Le docteur Arsenault prescrit une orthèse circonférentielle d'immobilisation au poignet gauche.
+
+Le travailleur obtient une évaluation des capacités fonctionnelles, où l'on recommande un programme de développement des capacités fonctionnelles. 
+
+Le docteur Arsenault produit un rapport final, le 1er mai 2025. Sur le diagnostic de lacération complexe du poignet gauche, elle consolide le travailleur avec atteinte permanente à l'intégrité physique ou psychique et limitations fonctionnelles. Elle ne produira pas le rapport d'évaluation médicale. 
+
+Nous avons à notre disposition le rapport d'évaluation des capacités fonctionnelles final du travailleur. Le rapport conclut que le travailleur n'a pas atteint les objectifs pour un retour au travail comme menuisier.
+______________________________________________________________________________________________________________
+
+New case 6 2025-08-03
+
+#WHISPER TRANSCRIPT
+
+La fiche de réclamation de la travailleuse décrit l'événement suivant survenu le 25 janvier 2025. En mettant un résident au lit, il s'est déplacé dans le lève-personne et a failli tomber. Je me suis dépêché pour le rattraper, ce qui m'a causé une tension musculaire. La travailleuse consulte le 27 janvier 2025. Le docteur Trang note une admission de 9 jours à l'hôpital pour une lombocytalgie droite post-accident de travail. Au scan, il note une hernie discale L3-L4 en contact avec la racine de L3 à droite. Une hernie discale L4-L5 avec oblitération foraminale L4-L5 à droite. Et un séquestre au niveau de L5-S1 avec une compression au niveau de S1 à droite. Il ajuste l'analgésie et réfère la travailleuse en clinique de la douleur. Il prescrit une arrêt de travail. La travailleuse rencontre le docteur Jean-Yves Beaulieu le 13 février 2025. Il diagnostique un entorse lombosacré avec lombocytalgie droite, ainsi que hernie discale L3-L4, L4-L5 et séquestre au niveau de séquestration sac dural en L5-S1. Il le prescrit de la physiothérapie et des assignations temporales. La travailleuse revoit le docteur Beaulieu le 6 mars 2025. Il juge la condition clinique stable. Il maintient les traitements en physiothérapie et les assignations temporales. La travailleuse revoit le docteur Beaulieu le 8 avril 2025. Il juge la condition clinique stable. Il maintient les traitements en physiothérapie. Il ajoute des traitements en ergothérapie. La travailleuse revoit le docteur Beaulieu le 7 avril 2025. Il ajoute des traitements en ergothérapie. Il ajoute des traitements en ergothérapie. Il ajoute des traitements en ergothérapie. Il ajoute des traitements en ergothérapie. A noter qu'à son examen physique, il note des réflexes ostéotendineux normaux et symétriques avec un tripode positif. Il ne juge pas pertinent de faire des adjudications supplémentaires. La travailleuse revoit le docteur Beaulieu le 15 avril 2025. Il juge la condition clinique stable. Il maintient les traitements en physiothérapie, ergothérapie et les assignations temporaires. On note à l'hospitalisation du 27 janvier au 4 février 2025 que la travailleuse a refusé la consultation en neurochirurgie sur la feuille sommaire. La travailleuse revoit le docteur Beaulieu le 1er mai 2025. Il juge la condition clinique stable. Il note que la lombogie gradit encore dans la cuisse à droite. Il maintient les traitements en physiothérapie, ergothérapie, les assignations temporaires et ajoute des traitements en acupuncture. La travailleuse revoit le docteur Beaulieu le 5 juin 2025. Il juge la condition clinique stable. Il maintient les traitements en physiothérapie, ergothérapie, acupuncture et ajoute des traitements au TENS. Il envisage une référence en chirurgie et maintient les assignations temporaires.
+
+#AI FORMATTED
+
+7. Historique de faits et évolution
+
+La fiche de réclamation de la travailleuse décrit l'événement suivant survenu le 25 janvier 2025 :
+
+« En mettant un résident au lit, il s'est déplacé dans le lève-personne et a failli tomber. Je me suis dépêché pour le rattraper, ce qui m'a causé une tension musculaire. »
+
+La travailleuse consulte le docteur Trang, le 27 janvier 2025. Le docteur note une admission de 9 jours à l'hôpital pour une lombocytalgie droite post-accident de travail. Au scan, il observe une hernie discale L3-L4 en contact avec la racine de L3 à droite, une hernie discale L4-L5 avec oblitération foraminale L4-L5 à droite, et un séquestre au niveau de L5-S1 avec une compression au niveau de S1 à droite. Il ajuste l'analgésie et réfère la travailleuse en clinique de la douleur. Il prescrit un arrêt de travail.
+
+La travailleuse rencontre le docteur Jean-Yves Beaulieu, le 13 février 2025. Il diagnostique une entorse lombosacrée avec lombocytalgie droite, ainsi qu'une hernie discale L3-L4, L4-L5 et un séquestre au niveau de L5-S1. Il prescrit de la physiothérapie et des assignations temporaires.
+
+La travailleuse revoit le docteur Beaulieu, le 6 mars 2025. Il juge la condition clinique stable et maintient les traitements en physiothérapie ainsi que les assignations temporaires.
+
+La travailleuse revoit le docteur Beaulieu, le 8 avril 2025. Il juge la condition clinique stable, maintient les traitements en physiothérapie et ajoute des traitements en ergothérapie.
+
+La travailleuse revoit le docteur Beaulieu, le 15 avril 2025. Il juge la condition clinique stable et maintient les traitements en physiothérapie, ergothérapie et les assignations temporaires. Il note que lors de l'hospitalisation du 27 janvier au 4 février 2025, la travailleuse a refusé la consultation en neurochirurgie sur la feuille sommaire.
+
+La travailleuse revoit le docteur Beaulieu, le 1er mai 2025. Il juge la condition clinique stable, note que la lombalgie irradie encore dans la cuisse à droite, et maintient les traitements en physiothérapie, ergothérapie, les assignations temporaires, tout en ajoutant des traitements en acupuncture.
+
+La travailleuse revoit le docteur Beaulieu, le 5 juin 2025. Il juge la condition clinique stable, maintient les traitements en physiothérapie, ergothérapie, acupuncture et ajoute des traitements au TENS. Il envisage une référence en chirurgie et maintient les assignations temporaires.
+
+
+
+
+

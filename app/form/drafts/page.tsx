@@ -6,8 +6,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
-import { Clock, FileText, Edit, Eye, Trash2, Plus } from "lucide-react"
+import { Clock, FileText, Edit, Eye, Trash2, Plus, AlertCircle } from "lucide-react"
 import { useLanguage } from "@/context/LanguageContext"
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
+import { Database } from "@/types/supabase"
+import { useToast } from "@/hooks/use-toast"
 
 interface DraftForm {
   id: string
@@ -16,65 +19,156 @@ interface DraftForm {
   formType: string
   progress: number
   lastModified: string
-  status: 'draft' | 'in-progress'
+  status: 'draft' | 'in-progress' | 'completed' | 'archived'
+  created_at: string
+  updated_at: string
 }
 
 export default function DraftsPage() {
   const [drafts, setDrafts] = useState<DraftForm[]>([])
   const [isLoading, setIsLoading] = useState(true)
+  const [isDeleting, setIsDeleting] = useState<string | null>(null)
   
   const router = useRouter()
   const { t } = useLanguage()
+  const { toast } = useToast()
+  const supabase = createClientComponentClient<Database>()
+
+  // Load real drafts from database
+  const loadDrafts = async () => {
+    try {
+      setIsLoading(true)
+      
+      // Get current user
+      const { data: { user }, error: authError } = await supabase.auth.getUser()
+      
+      if (authError || !user) {
+        throw new Error('User not authenticated')
+      }
+
+      // Fetch user's forms from database
+      const { data: forms, error: formsError } = await supabase
+        .from('forms')
+        .select(`
+          id,
+          patient_name,
+          patient_id,
+          form_type,
+          status,
+          created_at,
+          updated_at
+        `)
+        .eq('user_id', user.id)
+        .in('status', ['draft', 'in-progress'])
+        .order('updated_at', { ascending: false })
+
+      if (formsError) {
+        throw new Error(`Failed to load forms: ${formsError.message}`)
+      }
+
+      // Calculate progress for each form based on completed sections
+      const draftsWithProgress = await Promise.all(
+        forms.map(async (form) => {
+          // Get form sections to calculate progress
+          const { data: sections } = await supabase
+            .from('form_sections')
+            .select('section_name, completed')
+            .eq('form_id', form.id)
+
+          const totalSections = 4 // section7, section8, section11, etc.
+          const completedSections = sections?.filter(s => s.completed).length || 0
+          const progress = Math.round((completedSections / totalSections) * 100)
+
+          return {
+            id: form.id,
+            patientName: form.patient_name,
+            patientId: form.patient_id,
+            formType: form.form_type,
+            progress,
+            lastModified: form.updated_at,
+            status: form.status as 'draft' | 'in-progress' | 'completed' | 'archived',
+            created_at: form.created_at,
+            updated_at: form.updated_at
+          }
+        })
+      )
+
+      setDrafts(draftsWithProgress)
+    } catch (error) {
+      console.error('Error loading drafts:', error)
+      toast({
+        title: "Error",
+        description: "Failed to load your draft forms. Please try again.",
+        variant: "destructive"
+      })
+    } finally {
+      setIsLoading(false)
+    }
+  }
 
   useEffect(() => {
-    // Mock data for now
-    const mockDrafts: DraftForm[] = [
-      {
-        id: '1',
-        patientName: 'Jean Dupont',
-        patientId: 'P001',
-        formType: 'CNESST Report',
-        progress: 65,
-        lastModified: '2024-01-15T10:30:00Z',
-        status: 'in-progress'
-      },
-      {
-        id: '2',
-        patientName: 'Marie Tremblay',
-        patientId: 'P002',
-        formType: 'CNESST Report',
-        progress: 25,
-        lastModified: '2024-01-14T14:20:00Z',
-        status: 'draft'
-      },
-      {
-        id: '3',
-        patientName: 'Pierre Gagnon',
-        patientId: 'P003',
-        formType: 'Follow-up Report',
-        progress: 45,
-        lastModified: '2024-01-13T09:15:00Z',
-        status: 'in-progress'
-      }
-    ]
-    
-    setDrafts(mockDrafts)
-    setIsLoading(false)
+    loadDrafts()
   }, [])
 
   const handleContinueForm = (draftId: string) => {
-    // TODO: Load draft data and redirect to appropriate form section
-    router.push(`/form/section7?draft=${draftId}`)
+    // Redirect to the first form section with the form ID
+    router.push(`/form/section7?formId=${draftId}`)
   }
 
   const handleViewForm = (draftId: string) => {
-    // TODO: Show form preview
-    console.log('Viewing draft:', draftId)
+    // For now, redirect to a preview page or show modal
+    // TODO: Implement form preview functionality
+    toast({
+      title: "Form Preview",
+      description: "Form preview functionality coming soon!",
+    })
   }
 
-  const handleDeleteDraft = (draftId: string) => {
-    // TODO: Delete draft from database
-    setDrafts(prev => prev.filter(draft => draft.id !== draftId))
+  const handleDeleteDraft = async (draftId: string) => {
+    if (!confirm('Are you sure you want to delete this draft? This action cannot be undone.')) {
+      return
+    }
+
+    try {
+      setIsDeleting(draftId)
+      
+      // Delete form sections first (due to foreign key constraint)
+      const { error: sectionsError } = await supabase
+        .from('form_sections')
+        .delete()
+        .eq('form_id', draftId)
+
+      if (sectionsError) {
+        console.warn('Error deleting form sections:', sectionsError)
+      }
+
+      // Delete the form
+      const { error: formError } = await supabase
+        .from('forms')
+        .delete()
+        .eq('id', draftId)
+
+      if (formError) {
+        throw new Error(`Failed to delete form: ${formError.message}`)
+      }
+
+      // Remove from local state
+      setDrafts(prev => prev.filter(draft => draft.id !== draftId))
+      
+      toast({
+        title: "Draft Deleted",
+        description: "The draft has been successfully deleted.",
+      })
+    } catch (error) {
+      console.error('Error deleting draft:', error)
+      toast({
+        title: "Error",
+        description: "Failed to delete the draft. Please try again.",
+        variant: "destructive"
+      })
+    } finally {
+      setIsDeleting(null)
+    }
   }
 
   const getStatusBadge = (status: string) => {
@@ -83,9 +177,23 @@ export default function DraftsPage() {
         return <Badge variant="secondary" className="bg-blue-100 text-blue-800">In Progress</Badge>
       case "draft":
         return <Badge variant="outline" className="border-orange-200 text-orange-700">Draft</Badge>
+      case "completed":
+        return <Badge variant="default" className="bg-green-100 text-green-800">Completed</Badge>
+      case "archived":
+        return <Badge variant="outline" className="border-gray-200 text-gray-700">Archived</Badge>
       default:
         return <Badge variant="outline">Unknown</Badge>
     }
+  }
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    })
   }
 
   if (isLoading) {
@@ -93,8 +201,8 @@ export default function DraftsPage() {
       <div className="container mx-auto py-8">
         <div className="flex items-center justify-center h-64">
           <div className="text-center">
-            <Clock className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-            <p className="text-gray-500">Loading drafts...</p>
+            <Clock className="w-8 h-8 text-gray-400 mx-auto mb-2 animate-spin" />
+            <p className="text-gray-500">Loading your drafts...</p>
           </div>
         </div>
       </div>
@@ -155,7 +263,7 @@ export default function DraftsPage() {
                         <span className="text-sm text-gray-500">{draft.progress}%</span>
                       </div>
                       <span className="text-sm text-gray-500">
-                        Last modified: {new Date(draft.lastModified).toLocaleDateString()}
+                        Last modified: {formatDate(draft.lastModified)}
                       </span>
                     </div>
                   </div>
@@ -164,12 +272,14 @@ export default function DraftsPage() {
                       variant="outline"
                       size="sm"
                       onClick={() => handleViewForm(draft.id)}
+                      disabled={isDeleting === draft.id}
                     >
                       <Eye className="w-4 h-4" />
                     </Button>
                     <Button
                       size="sm"
                       onClick={() => handleContinueForm(draft.id)}
+                      disabled={isDeleting === draft.id}
                     >
                       <Edit className="w-4 h-4 mr-2" />
                       Continue
@@ -178,8 +288,13 @@ export default function DraftsPage() {
                       variant="outline"
                       size="sm"
                       onClick={() => handleDeleteDraft(draft.id)}
+                      disabled={isDeleting === draft.id}
                     >
-                      <Trash2 className="w-4 h-4" />
+                      {isDeleting === draft.id ? (
+                        <Clock className="w-4 h-4 animate-spin" />
+                      ) : (
+                        <Trash2 className="w-4 h-4" />
+                      )}
                     </Button>
                   </div>
                 </div>
